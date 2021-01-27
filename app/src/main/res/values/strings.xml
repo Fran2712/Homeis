@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Homeis</string>
-
-
     <string name="register_msg">Registrate ahora y conecta con tu vecindario</string>
     <string name="pass">Contraseña</string>
     <string name="pass_conf">Confirmar Contraseña</string>
