@@ -8,4 +8,5 @@
     <string name="terms">Aceptar términos de privacidad y recibir emails con novedades</string>
     <string name="reg">Registrarse</string>
     <string name="mail">E-Mail</string>
+    <string name="address1">Set your address...</string>
 </resources>
