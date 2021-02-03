@@ -1,5 +1,5 @@
 <resources>
-    <style name="AppThemeNoBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="AppThemeNoBar" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -7,7 +7,7 @@
         <item name="colorPrimarySurface">@color/colorAccent2</item>
         <item name="colorSecondary">@color/colorAccent3</item>
     </style>
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
