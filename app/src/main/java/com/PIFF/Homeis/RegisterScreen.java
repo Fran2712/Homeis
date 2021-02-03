@@ -20,8 +20,8 @@ public class RegisterScreen extends AppCompatActivity {
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent intent = new Intent(RegisterScreen.this, MainActivity.class);
-               // startActivity(intent);
+                Intent intent = new Intent(RegisterScreen.this, Direccion.class);
+                startActivity(intent);
             }
         });
     }
