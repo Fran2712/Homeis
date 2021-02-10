@@ -8,18 +8,17 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="412dp"
-        android:layout_height="534dp"
+        android:layout_width="343dp"
+        android:layout_height="508dp"
         android:layout_gravity="center"
-        android:layout_marginTop="92dp"
-        android:layout_weight="1"
+        android:layout_marginBottom="56dp"
 
+        android:layout_weight="1"
         android:background="@drawable/shapecard"
         android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TV_SignIn" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/guideline"
@@ -55,7 +54,7 @@
         android:layout_height="123dp"
         android:layout_marginTop="36dp"
         android:fontFamily="@font/overlock_bold"
-        android:text="@string/address1"
+        android:text="@string/direccion1"
         android:textColor="@color/design_default_color_background"
         android:textSize="30dp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -68,7 +67,7 @@
         android:layout_marginTop="38dp"
         android:elevation="8dp"
         android:ems="10"
-        android:hint="Address 1"
+        android:hint="@string/address1"
         android:inputType="text"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
@@ -86,6 +85,7 @@
             android:fontFamily="@font/overlock" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Address2"
         android:layout_width="0dp"
@@ -93,7 +93,7 @@
         android:layout_marginTop="23dp"
         android:elevation="8dp"
         android:ems="10"
-        android:hint="Address 2"
+        android:hint="@string/address2"
         android:inputType="text"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
@@ -111,6 +111,7 @@
             android:fontFamily="@font/overlock" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/PostalCode"
         android:layout_width="0dp"
@@ -118,7 +119,7 @@
         android:layout_marginTop="23dp"
         android:elevation="8dp"
         android:ems="10"
-        android:hint="Postal code"
+        android:hint="@string/cp"
         android:inputType="text"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
@@ -136,6 +137,7 @@
             android:fontFamily="@font/overlock" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/City"
         android:layout_width="0dp"
@@ -143,7 +145,7 @@
         android:layout_marginTop="23dp"
         android:elevation="8dp"
         android:ems="10"
-        android:hint="City"
+        android:hint="@string/city"
         android:inputType="text"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
@@ -161,6 +163,7 @@
             android:fontFamily="@font/overlock" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Country"
         android:layout_width="0dp"
@@ -168,7 +171,7 @@
         android:layout_marginTop="23dp"
         android:elevation="8dp"
         android:ems="10"
-        android:hint="Country"
+        android:hint="@string/country"
         android:inputType="text"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
@@ -186,23 +189,23 @@
             android:fontFamily="@font/overlock" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/BTN_regster"
         style="@style/ButtonStraight"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock"
         android:stateListAnimator="@null"
-        android:text="Register"
+        android:text="@string/direc"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/Country"
 
-        app:layout_constraintVertical_bias="0.937" />
+        app:layout_constraintVertical_bias="0.411" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,12 +1,24 @@
 <resources>
     <string name="app_name">Homeis</string>
 
-
     <string name="register_msg">Registrate ahora y conecta con tu vecindario</string>
+    <string name="register">¿No tienes cuenta?</string>
+    <string name="register2">Registrate Ahora</string>
+
+    <string name="logon_msg">Inicia sesión ahora para conectar con tu vecindario</string>
+    <string name="login">Iniciar Sesión</string>
+
     <string name="pass">Contraseña</string>
     <string name="pass_conf">Confirmar Contraseña</string>
     <string name="terms">Aceptar términos de privacidad y recibir emails con novedades</string>
     <string name="reg">Registrarse</string>
     <string name="mail">E-Mail</string>
-    <string name="address1">Set your address...</string>
+
+    <string name="direccion1">Introduzca su Dirección...</string>
+    <string name="direc">Registrar Direción</string>
+    <string name="address1">Direccion 1</string>
+    <string name="address2">Direccion 2</string>
+    <string name="cp">Codigo Postal</string>
+    <string name="city">Ciudad</string>
+    <string name="country">Pais</string>
 </resources>
