@@ -21,4 +21,13 @@
     <string name="cp">Codigo Postal</string>
     <string name="city">Ciudad</string>
     <string name="country">Pais</string>
+
+    <string name="bienv">Hola,</string>
+    <string name="nombreEj">Sophie</string>
+    <string name="quenec">¿Qué necesitas?</string>
+
+    <string name="card1">Card1</string>
+    <string name="card2">Card2</string>
+    <string name="card3">Card3</string>
+    <string name="card4">Card4</string>
 </resources>
