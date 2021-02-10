@@ -15,4 +15,8 @@
         <item name="colorPrimarySurface">@color/colorAccent2</item>
         <item name="colorSecondary">@color/colorAccent3</item>
     </style>
+    <style name="ButtonStraight" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="cornerRadius">20dp</item>
+    </style>
 </resources>
