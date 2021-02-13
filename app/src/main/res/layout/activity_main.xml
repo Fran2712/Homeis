@@ -22,7 +22,7 @@
 
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/vista_contenedor"
         android:layout_width="395dp"
         android:layout_height="516dp"
         android:layout_gravity="center"
@@ -31,7 +31,6 @@
         android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -48,22 +47,16 @@
         app:srcCompat="@drawable/bg"
         tools:srcCompat="@drawable/bg" />
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="336dp"
-        android:layout_height="177dp"
-        android:layout_gravity="center"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_publicaciones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        android:layout_marginTop="44dp"
-        android:layout_weight="1"
-        android:background="@drawable/shapecard3"
-        android:elevation="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.097" />
+
 
     <TextView
         android:id="@+id/TV_necesi"
@@ -79,7 +72,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/vista_contenedor"
         app:layout_constraintVertical_bias="0.049" />
 
     <View
@@ -93,7 +86,7 @@
         android:backgroundTint="@color/colorAccent"
         android:elevation="5dp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        app:layout_constraintTop_toTopOf="@+id/vista_contenedor" />
 
     <TextView
         android:id="@+id/TV_card_1"
@@ -126,6 +119,7 @@
         android:elevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/card_3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/card_1"
         app:layout_constraintVertical_bias="0.0" />
@@ -153,16 +147,16 @@
         android:layout_height="136dp"
         android:layout_gravity="center"
         android:layout_marginTop="28dp"
+        android:layout_marginBottom="128dp"
         android:layout_weight="1"
         android:background="@drawable/shapecard3"
         android:backgroundTint="@color/colorAccent3"
         android:elevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/card_4" />
 
     <TextView
         android:id="@+id/TV_card_3"
@@ -198,10 +192,10 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/card_1"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        app:layout_constraintTop_toTopOf="@+id/vista_contenedor" />
 
     <TextView
-        android:id="@+id/TV_card4"
+        android:id="@+id/TV_card_4"
         android:layout_width="71dp"
         android:layout_height="37dp"
         android:elevation="5dp"
@@ -216,23 +210,18 @@
         app:layout_constraintTop_toTopOf="@+id/card_4"
         app:layout_constraintVertical_bias="1.0" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="35dp"
-        android:layout_height="36dp"
-        android:elevation="8dp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="72dp"
-        tools:srcCompat="@tools:sample/avatars" />
+
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/IMG_ocultar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="8dp"
         android:elevation="5dp"
-        app:srcCompat="@drawable/ic_menu_on_surface_24dp"
-        tools:layout_editor_absoluteX="184dp"
-        tools:layout_editor_absoluteY="269dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vista_contenedor"
+        app:srcCompat="@drawable/ic_menu_on_surface_24dp" />
 
     <!-- Bottom Appbar
 

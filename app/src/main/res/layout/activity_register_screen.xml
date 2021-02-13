@@ -8,7 +8,7 @@
     tools:context=".RegisterScreen">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/vista_contenedor"
         android:layout_width="337dp"
         android:layout_height="437dp"
         android:layout_gravity="center"
@@ -93,7 +93,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/view">
+        app:layout_constraintTop_toTopOf="@+id/vista_contenedor">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -188,7 +188,7 @@
         android:fontFamily="@font/overlock"
         android:stateListAnimator="@null"
         android:text="@string/reg"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/vista_contenedor"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
