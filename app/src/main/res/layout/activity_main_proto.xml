@@ -20,45 +20,54 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="28dp" />
 
-
     <View
         android:id="@+id/vista_contenedor"
-        android:layout_width="395dp"
-        android:layout_height="516dp"
+        android:layout_width="411dp"
+        android:layout_height="508dp"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:background="@drawable/shapecard2"
         android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
 
     <ImageView
-        android:id="@+id/IMG_bg_full"
-        android:layout_width="462dp"
-        android:layout_height="825dp"
-        android:visibility="visible"
+        android:id="@+id/IMG_bg"
+        android:layout_width="541dp"
+        android:layout_height="313dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fullbg" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/bg"
+        tools:srcCompat="@drawable/bg" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_publicaciones"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="0dp" />
+    <TextView
+        android:id="@+id/TV_bienvenida"
+        android:layout_width="132dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="@font/overlock_bold"
+        android:text="@string/bienv"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/TV_NombreUsuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/TV_necesi"
-        android:layout_width="276dp"
-        android:layout_height="39dp"
+        android:layout_width="277dp"
+        android:layout_height="62dp"
         android:layout_marginTop="12dp"
         android:elevation="4dp"
         android:fontFamily="@font/overlock_bold"
@@ -67,18 +76,33 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/vista_contenedor"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.009" />
+
+    <TextView
+        android:id="@+id/TV_NombreUsuario"
+        android:layout_width="188dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/overlock_bold"
+        android:text="@string/nombreEj"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/vista_contenedor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949" />
 
     <View
         android:id="@+id/card_1"
         android:layout_width="152dp"
         android:layout_height="136dp"
         android:layout_gravity="center"
-
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="88dp"
         android:layout_weight="1"
         android:background="@drawable/shapecard3"
         android:backgroundTint="@color/colorAccent"
@@ -88,18 +112,18 @@
 
     <TextView
         android:id="@+id/TV_card_1"
-        android:layout_width="117dp"
-        android:layout_height="34dp"
+        android:layout_width="71dp"
+        android:layout_height="37dp"
         android:layout_marginStart="46dp"
         android:layout_marginEnd="35dp"
         android:elevation="5dp"
         android:fontFamily="@font/overlock"
         android:text="@string/card1"
         android:textColor="@color/design_default_color_background"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/card_1"
         app:layout_constraintEnd_toEndOf="@+id/card_1"
-        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/card_1"
         app:layout_constraintTop_toTopOf="@+id/card_1"
         app:layout_constraintVertical_bias="1.0" />
@@ -124,21 +148,20 @@
 
     <TextView
         android:id="@+id/TV_card_2"
-        android:layout_width="87dp"
-        android:layout_height="36dp"
+        android:layout_width="71dp"
+        android:layout_height="37dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="99dp"
         android:layout_marginEnd="41dp"
         android:elevation="5dp"
         android:fontFamily="@font/overlock"
-        android:text="@string/card3"
+        android:text="@string/card1"
         android:textColor="@color/design_default_color_background"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/card_2"
         app:layout_constraintEnd_toEndOf="@+id/card_2"
         app:layout_constraintStart_toStartOf="@+id/card_2"
         app:layout_constraintTop_toTopOf="@+id/card_2" />
-
 
     <View
         android:id="@+id/card_3"
@@ -146,7 +169,6 @@
         android:layout_height="136dp"
         android:layout_gravity="center"
         android:layout_marginTop="28dp"
-        android:layout_marginBottom="128dp"
         android:layout_weight="1"
         android:background="@drawable/shapecard3"
         android:backgroundTint="@color/colorAccent3"
@@ -160,22 +182,23 @@
 
     <TextView
         android:id="@+id/TV_card_3"
-        android:layout_width="72dp"
-        android:layout_height="32dp"
+        android:layout_width="71dp"
+        android:layout_height="37dp"
         android:layout_marginStart="38dp"
         android:layout_marginTop="99dp"
         android:layout_marginEnd="43dp"
         android:elevation="5dp"
         android:fontFamily="@font/overlock"
-        android:text="@string/card4"
+        android:text="@string/card1"
         android:textColor="@color/design_default_color_background"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/card_3"
         app:layout_constraintEnd_toEndOf="@+id/card_3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/card_3"
         app:layout_constraintTop_toTopOf="@+id/card_3"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <View
         android:id="@+id/card_4"
@@ -183,7 +206,7 @@
         android:layout_height="136dp"
         android:layout_gravity="center"
         android:layout_marginStart="43dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="88dp"
         android:layout_weight="1"
         android:background="@drawable/shapecard3"
         android:backgroundTint="@color/colorPrimaryDark"
@@ -195,93 +218,19 @@
 
     <TextView
         android:id="@+id/TV_card_4"
-        android:layout_width="51dp"
-        android:layout_height="30dp"
+        android:layout_width="71dp"
+        android:layout_height="37dp"
         android:elevation="5dp"
         android:fontFamily="@font/overlock"
-        android:text="@string/card2"
+        android:text="@string/card1"
         android:textColor="@color/design_default_color_background"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/card_4"
         app:layout_constraintEnd_toEndOf="@+id/card_4"
-        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="@+id/card_4"
         app:layout_constraintTop_toTopOf="@+id/card_4"
         app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/IMG_ocultar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="184dp"
-        android:layout_marginTop="8dp"
-        android:elevation="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/vista_contenedor"
-        app:srcCompat="@drawable/ic_menu_on_surface_24dp" />
-
-    <ImageView
-        android:id="@+id/IMG_preg"
-        android:layout_width="59dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="48dp"
-        android:elevation="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/card_2"
-        app:layout_constraintEnd_toEndOf="@+id/card_2"
-        app:layout_constraintStart_toStartOf="@+id/card_2"
-        app:layout_constraintTop_toTopOf="@+id/card_2"
-        app:srcCompat="@drawable/preguntas"/>
-
-    <ImageView
-        android:id="@+id/IMG_serv"
-        android:layout_width="59dp"
-        android:layout_height="55dp"
-
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="48dp"
-        android:elevation="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/card_3"
-        app:layout_constraintEnd_toEndOf="@+id/card_3"
-        app:layout_constraintStart_toStartOf="@+id/card_3"
-        app:layout_constraintTop_toTopOf="@+id/card_3"
-        app:srcCompat="@drawable/servicios" />
-
-    <ImageView
-        android:id="@+id/IMG_herr"
-        android:layout_width="59dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="48dp"
-
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="48dp"
-        android:elevation="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/card_1"
-        app:layout_constraintEnd_toEndOf="@+id/card_1"
-        app:layout_constraintStart_toStartOf="@+id/card_1"
-        app:layout_constraintTop_toTopOf="@+id/card_1"
-        app:srcCompat="@drawable/herramientas" />
-
-    <ImageView
-        android:id="@+id/IMG_social"
-        android:layout_width="59dp"
-        android:layout_height="55dp"
-
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="48dp"
-        android:elevation="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/card_4"
-        app:layout_constraintEnd_toEndOf="@+id/card_4"
-        app:layout_constraintStart_toStartOf="@+id/card_4"
-        app:layout_constraintTop_toTopOf="@+id/card_4"
-        app:srcCompat="@drawable/social" />
 
     <!-- Bottom Appbar
 

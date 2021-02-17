@@ -7,7 +7,7 @@
     tools:context=".Direccion">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/vista_contenedor"
         android:layout_width="343dp"
         android:layout_height="508dp"
         android:layout_gravity="center"
@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/guideline"
+        android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -57,7 +57,7 @@
         android:text="@string/direccion1"
         android:textColor="@color/design_default_color_background"
         android:textSize="30dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -68,6 +68,7 @@
         android:elevation="8dp"
         android:ems="10"
         android:hint="@string/address1"
+        app:boxBackgroundColor="@android:color/white"
         android:inputType="text"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
@@ -75,8 +76,8 @@
         app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/view">
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/vista_contenedor">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -95,13 +96,14 @@
         android:ems="10"
         android:hint="@string/address2"
         android:inputType="text"
+        app:boxBackgroundColor="@android:color/white"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/Address1">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -117,6 +119,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
+        app:boxBackgroundColor="@android:color/white"
         android:elevation="8dp"
         android:ems="10"
         android:hint="@string/cp"
@@ -127,7 +130,7 @@
         app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/Address2">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -146,6 +149,7 @@
         android:elevation="8dp"
         android:ems="10"
         android:hint="@string/city"
+        app:boxBackgroundColor="@android:color/white"
         android:inputType="text"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
@@ -153,7 +157,7 @@
         app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/PostalCode">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -171,6 +175,7 @@
         android:layout_marginTop="23dp"
         android:elevation="8dp"
         android:ems="10"
+        app:boxBackgroundColor="@android:color/white"
         android:hint="@string/country"
         android:inputType="text"
         app:boxCornerRadiusBottomEnd="20dp"
@@ -179,7 +184,7 @@
         app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/City">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -199,10 +204,10 @@
         android:fontFamily="@font/overlock"
         android:stateListAnimator="@null"
         android:text="@string/direc"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/vista_contenedor"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/Country"
 
         app:layout_constraintVertical_bias="0.411" />
