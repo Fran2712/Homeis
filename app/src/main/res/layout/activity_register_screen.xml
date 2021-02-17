@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.74" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -73,7 +73,7 @@
         android:text="@string/register_msg"
         android:textColor="@color/design_default_color_background"
         android:textSize="30dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -92,7 +92,7 @@
         app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/vista_contenedor">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -121,7 +121,7 @@
         app:endIconTint="@color/colorPrimary"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/ED_pass">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -146,7 +146,7 @@
         app:layout_constraintBottom_toTopOf="@+id/BTN_regster"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/ED_conf_pass"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -168,7 +168,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:boxBackgroundColor="@android:color/white"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/ED_email">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -191,7 +191,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/vista_contenedor"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/ED_conf_pass"
 
         app:layout_constraintVertical_bias="0.937" />

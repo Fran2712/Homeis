@@ -2,6 +2,7 @@ package com.PIFF.Homeis;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -9,6 +10,8 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Transformation;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +19,7 @@ import android.widget.Toast;
 import com.google.android.material.bottomappbar.BottomAppBar;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager gestor;
     private RecyclerView.LayoutManager gestor2;
     private  AdaptadorRecyclerPublicaciones adapt;
+    private  ImageView img_serv;
+    private  ImageView img_preg;
+    private  ImageView img_herr;
+    private  ImageView img_social;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +61,16 @@ public class MainActivity extends AppCompatActivity {
         txt_card_2 = findViewById(R.id.TV_card_2);
         txt_card_3 = findViewById(R.id.TV_card_3);
         txt_card_4 = findViewById(R.id.TV_card_4);
+
+        img_serv = findViewById(R.id.IMG_serv);
+        img_preg = findViewById(R.id.IMG_preg);
+        img_herr = findViewById(R.id.IMG_herr);
+        img_social = findViewById(R.id.IMG_social);
+
         bajado = false;
 
-        Publicacion c1 = new Publicacion("Adolfo Hitzar","El frio es para tanto","hoy he estado en Rusia y necesito que alguien me deje una sierra radial");
-        Publicacion c2 = new Publicacion("Benito Moussolano","Se me ha roto la estanteria","Pues eso mnecesito que alguien me ayude a montar la que me comprao del ikea ");
+        Publicacion c1 = new Publicacion("Adolfo","Necesito a una motosierra","hoy he estado en Rusia y necesito que alguien me deje una sierra radial",new Date());
+        Publicacion c2 = new Publicacion("Benito ","Necesito un Manitas","Pues eso mnecesito que alguien me ayude a montar la que me comprao del ikea", new Date());
 
         ArrayList<Publicacion> liata = new ArrayList<>();
 
@@ -83,8 +97,11 @@ public class MainActivity extends AppCompatActivity {
                     txt_card_3.animate().translationYBy(+1200).start();
                     txt_card_4.animate().translationYBy(+1200).start();
                     tit.animate().translationYBy(+1200).start();
+                    img_serv.animate().translationYBy(+1200).start();
+                    img_preg.animate().translationYBy(+1200).start();
+                    img_herr.animate().translationYBy(+1200).start();
+                    img_social.animate().translationYBy(+1200).start();
                     tit.setVisibility(View.INVISIBLE);
-
                     rec.setLayoutManager(gestor2);
                     bajado = true;
                 }else{
@@ -99,7 +116,12 @@ public class MainActivity extends AppCompatActivity {
                     txt_card_3.animate().translationYBy(-1200).start();
                     txt_card_4.animate().translationYBy(-1200).start();
                     tit.animate().translationYBy(-1200).start();
+                    img_serv.animate().translationYBy(-1200).start();
+                    img_preg.animate().translationYBy(-1200).start();
+                    img_herr.animate().translationYBy(-1200).start();
+                    img_social.animate().translationYBy(-1200).start();
                     tit.setVisibility(View.VISIBLE);
+                    rec.animate().alphaBy(1).start();
                     rec.setLayoutManager(gestor);
                     bajado = false;
                 }
@@ -108,4 +130,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 }

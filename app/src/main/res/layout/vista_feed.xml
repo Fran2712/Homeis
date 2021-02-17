@@ -5,6 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="200dp">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="28dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="66dp" />
+
     <View
         android:id="@+id/view2"
         android:layout_width="336dp"
@@ -15,35 +29,109 @@
         android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/TV_descrip"
-        android:layout_width="290dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="4dp"
+        android:id="@+id/TV_txt_nec"
+        android:layout_width="44dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/overlock_bold"
+        android:text="@string/txnec"
+        android:textColor="@color/colorAccent4"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/TV_titulo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/IMG_pfp" />
+
+    <TextView
+        android:id="@+id/TV_txt_desc"
+        android:layout_width="53dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/overlock_bold"
+        android:text="@string/txdesc"
+        android:textColor="@color/colorAccent4"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/TV_descrip"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/TV_txt_nec" />
+
+    <TextView
+        android:id="@+id/TV_txt_fecha"
+        android:layout_width="35dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/overlock_bold"
+        android:text="@string/txfecha"
+        android:textColor="@color/colorAccent4"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/TV_fecha"
+
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/TV_txt_desc" />
+
+    <TextView
+        android:id="@+id/TV_fecha"
+        android:layout_width="215dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="16dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock_bold"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/TV_autor" />
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/TV_descrip" />
 
     <TextView
-        android:id="@+id/TV_autor"
-        android:layout_width="88dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="72dp"
+        android:id="@+id/TV_descrip"
+        android:layout_width="215dp"
+        android:layout_height="39dp"
         android:layout_marginTop="8dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock_bold"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/TV_titulo" />
+
+    <TextView
+        android:id="@+id/TV_titulo"
+        android:layout_width="215dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="69dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/overlock_bold"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/TV_autor"
+        android:layout_width="205dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/overlock_bold"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/IMG_pfp"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -52,35 +140,17 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="28dp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="28dp" />
-
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="56dp"
-        android:layout_height="50dp"
+        android:id="@+id/IMG_pfp"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:elevation="8dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toTopOf="@+id/view2"
         tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/TV_titulo"
-        android:layout_width="246dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="12dp"
-        android:elevation="8dp"
-        android:fontFamily="@font/overlock_bold"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,8 +26,12 @@
     <string name="nombreEj">Sophie</string>
     <string name="quenec">¿Qué necesitas?</string>
 
-    <string name="card1">Card1</string>
-    <string name="card2">Card2</string>
-    <string name="card3">Card3</string>
-    <string name="card4">Card4</string>
+    <string name="card1">Herramientas</string>
+    <string name="card2">Social</string>
+    <string name="card3">Preguntas</string>
+    <string name="card4">Servicios</string>
+
+    <string name="txnec">Necesita</string>
+    <string name="txdesc">Descripcion</string>
+    <string name="txfecha">Fecha</string>
 </resources>
