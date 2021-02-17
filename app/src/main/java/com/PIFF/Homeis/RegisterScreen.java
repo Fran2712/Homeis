@@ -55,7 +55,7 @@ public class RegisterScreen extends AppCompatActivity {
                 Usuario user = new Usuario(ed_email.getEditText().getText().toString(),ed_pass.getEditText().getText().toString());
                 List<Usuario> usuariosBBDD= AccesoFirebase.devolverUsuarios();
                 boolean usuario_existente = AccesoFirebase.comprobarUsuario(ed_email.getEditText().getText().toString());
-                if (usuario_existente){
+                if (usuario_existente || usuariosBBDD.isEmpty()){
                     Toast.makeText(RegisterScreen.this,"El usuario ya existe",Toast.LENGTH_LONG).show();
                 }else{
                     AccesoFirebase.altaUsuario(user);

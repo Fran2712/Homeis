@@ -24,12 +24,11 @@ public class AccesoFirebase {
     }
     public static void altaUsuario(Usuario usuario) {
         DatabaseReference ref = conexionBBDD();
-        ref.push().setValue(usuario);
+        ref.child(usuario.getEmail().replace(".","")).setValue(usuario);
     }
     public static List<Usuario> devolverUsuarios() {
         DatabaseReference ref = conexionBBDD();
-        final boolean[] existente = {false};
-        ref.addValueEventListener(new ValueEventListener() {
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Iterable<DataSnapshot> datos = snapshot.getChildren();
@@ -55,5 +54,9 @@ public class AccesoFirebase {
             }
         }
         return false;
+    }
+
+    public static void eliminarUsuario(Usuario user) {
+        DatabaseReference mDatabase =conexionBBDD().child(user.getEmail());
     }
 }
