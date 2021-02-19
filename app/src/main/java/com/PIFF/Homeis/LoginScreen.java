@@ -7,6 +7,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
+import me.relex.circleindicator.CircleIndicator;
 
 public class LoginScreen extends AppCompatActivity {
     private Button btn_login;
@@ -16,6 +19,7 @@ public class LoginScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         btn_login = findViewById(R.id.BTN_login);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
