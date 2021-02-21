@@ -29,6 +29,8 @@ public class AccesoFirebase {
     public static List<Usuario> devolverUsuarios() {
         DatabaseReference ref = conexionBBDD();
         final boolean[] existente = {false};
+
+
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -44,6 +46,7 @@ public class AccesoFirebase {
                 Log.e("ERROR",error.getMessage());
             }
         });
+
 
         return usuariosBBDD;
     }
