@@ -34,7 +34,7 @@ public class LoginScreen extends AppCompatActivity {
         ed_email.getEditText().addTextChangedListener(validarCampos);
         ed_pass.getEditText().addTextChangedListener(validarCampos);
         btn_login.setEnabled(false);
-
+        AccesoFirebase.devolverUsuarios();
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
