@@ -59,4 +59,13 @@ public class AccesoFirebase {
     public static void eliminarUsuario(Usuario user) {
         DatabaseReference mDatabase =conexionBBDD().child(user.getEmail());
     }
+
+    public static boolean comprobarLogin(String user_email, String user_pass) {
+        for (Usuario u: usuariosBBDD) {
+            if (u.getEmail().equals(user_email) && u.getPassword().equals(user_pass)){
+                return true;
+            }
+        }
+        return false;
+    }
 }
