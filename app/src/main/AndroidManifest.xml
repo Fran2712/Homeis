@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ServiciosScreen" android:theme="@style/AppThemeNoBar"></activity>
+        <activity android:name=".Preguntas_screen"></activity>
+        <activity
+            android:name=".ServiciosScreen"
+            android:theme="@style/AppThemeNoBar" />
         <activity
             android:name=".RegisterScreen"
             android:theme="@style/AppThemeNoBar" />
