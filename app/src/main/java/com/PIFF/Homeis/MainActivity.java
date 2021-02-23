@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
 import com.PIFF.Homeis.entidad.Publicacion;
 
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView txt_card_4;
     private RecyclerView.LayoutManager gestor;
     private RecyclerView.LayoutManager gestor2;
-    private  AdaptadorRecyclerPublicaciones adapt;
+    private AdaptadorRecyclerPublicaciones adapt;
     private  ImageView img_serv;
     private  ImageView img_preg;
     private  ImageView img_herr;
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         adapt = new AdaptadorRecyclerPublicaciones(liata);
         rec.setAdapter(adapt);
         rec.setLayoutManager(gestor);
+        //servicios
         card3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +84,30 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //herramientas
+        /*card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ServiciosScreen.class);
+                startActivity(intent);
+            }
+        });*/
+        //preguntas
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Preguntas_screen.class);
+                startActivity(intent);
+            }
+        });
+        //social
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ServiciosScreen.class);
+                startActivity(intent);
+            }
+        });
         ocul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

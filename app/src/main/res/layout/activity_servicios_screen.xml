@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="@+id/view" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RC_servicios"
+        android:id="@+id/RC_servivios"
         android:layout_width="match_parent"
         android:layout_height="531dp"
         android:layout_marginBottom="29dp"

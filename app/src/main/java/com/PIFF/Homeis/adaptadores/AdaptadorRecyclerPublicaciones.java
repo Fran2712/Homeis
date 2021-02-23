@@ -1,4 +1,4 @@
-package com.PIFF.Homeis;
+package com.PIFF.Homeis.adaptadores;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.PIFF.Homeis.R;
 import com.PIFF.Homeis.entidad.Publicacion;
 
 import java.util.ArrayList;
@@ -26,9 +27,9 @@ public class AdaptadorRecyclerPublicaciones extends RecyclerView.Adapter<Adaptad
     @Override
     public ContenedorDeVistas onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final View vista = LayoutInflater.from(parent.getContext()).inflate(R.layout.vista_feed, parent, false);
-        TextView tv_titulo = vista.findViewById(R.id.TV_titulo);
+        TextView tv_titulo = vista.findViewById(R.id.TV_servicio);
         TextView tv_autor = vista.findViewById(R.id.TV_autor);
-        TextView tv_descrip = vista.findViewById(R.id.TV_descrip);
+        TextView tv_descrip = vista.findViewById(R.id.TV_pregunta);
         TextView tv_fecha = vista.findViewById(R.id.TV_fecha);
         ImageView img_pfp = vista.findViewById(R.id.IMG_pfp);
         ContenedorDeVistas contenedor = new ContenedorDeVistas(vista);
@@ -65,10 +66,10 @@ public class AdaptadorRecyclerPublicaciones extends RecyclerView.Adapter<Adaptad
 
         public ContenedorDeVistas(View vista) {
             super(vista);
-            this.tv_titulo = vista.findViewById(R.id.TV_titulo);
+            this.tv_titulo = vista.findViewById(R.id.TV_servicio);
             this.tv_autor = vista.findViewById(R.id.TV_autor);
             this.tv_fecha = vista.findViewById(R.id.TV_fecha);
-            this.tv_descrip = vista.findViewById(R.id.TV_descrip);
+            this.tv_descrip = vista.findViewById(R.id.TV_pregunta);
             this.img_pfp = vista.findViewById(R.id.IMG_pfp);
         }
     }
