@@ -24,12 +24,20 @@
         <activity
             android:name=".SplashScreen"
             android:theme="@style/AppThemeNoBar">
+        </activity>
+        <activity
+            android:name=".NotificationsScreen"
+            android:theme="@style/AppThemeNoBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity
+            android:name=".RequestsScreen"
+            android:theme="@style/AppThemeNoBar" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -31,7 +31,7 @@ public class AdaptadorRecyclerNotification extends RecyclerView.Adapter<Adaptado
         TextView notif_subtxt = vista.findViewById(R.id.notif_subtext);
         TextView notif_type = vista.findViewById(R.id.notif_type);
         TextView notif_date = vista.findViewById(R.id.notif_date);
-        TextView notif_ic = vista.findViewById(R.id.notif_ic);
+        ImageView notif_ic = vista.findViewById(R.id.notif_ic);
         ContenedorDeVistas contenedor = new ContenedorDeVistas(vista);
         Log.d("Contenedor","Creando contenedor de vistas");
         vista.setOnClickListener(new View.OnClickListener() {

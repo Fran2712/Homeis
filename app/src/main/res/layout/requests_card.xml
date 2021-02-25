@@ -25,8 +25,20 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginTop="16dp"
+        android:elevation="8dp"
         android:text="@string/decline_btn"
         app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/TE_fecha" />
+
+    <Button
+        android:id="@+id/btn_accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:elevation="8dp"
+        android:text="@string/Accept_btn"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
         app:layout_constraintTop_toBottomOf="@+id/TE_fecha" />
 
     <View
@@ -158,15 +170,5 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="28dp" />
-
-    <Button
-        android:id="@+id/btn_accept"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="64dp"
-        android:text="@string/Accept_btn"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/TE_fecha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
