@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/TV_txt_nec"
+        android:id="@+id/TV_txt_requesting"
         android:layout_width="44dp"
         android:layout_height="18dp"
         android:layout_marginTop="12dp"
@@ -43,13 +43,13 @@
         android:text="@string/txnec"
         android:textColor="@color/colorAccent4"
         android:textSize="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/TV_titulo"
+        app:layout_constraintEnd_toStartOf="@+id/TE_titulo_request"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/IMG_pfp" />
 
     <TextView
-        android:id="@+id/TV_txt_desc"
+        android:id="@+id/TV_txt_comment"
         android:layout_width="53dp"
         android:layout_height="18dp"
         android:layout_marginTop="8dp"
@@ -59,10 +59,10 @@
         android:text="@string/txdesc"
         android:textColor="@color/colorAccent4"
         android:textSize="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/TV_descrip"
+        app:layout_constraintEnd_toStartOf="@+id/TE_descrip"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/TV_txt_nec" />
+        app:layout_constraintTop_toBottomOf="@+id/TV_txt_requesting" />
 
     <TextView
         android:id="@+id/TV_txt_fecha"
@@ -75,14 +75,14 @@
         android:text="@string/txfecha"
         android:textColor="@color/colorAccent4"
         android:textSize="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/TV_fecha"
+        app:layout_constraintEnd_toStartOf="@+id/TE_fecha"
 
         app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/TV_txt_desc" />
+        app:layout_constraintTop_toBottomOf="@+id/TV_txt_comment" />
 
     <TextView
-        android:id="@+id/TV_fecha"
+        android:id="@+id/TE_fecha"
         android:layout_width="215dp"
         android:layout_height="18dp"
         android:layout_marginTop="13dp"
@@ -93,10 +93,10 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/TV_descrip" />
+        app:layout_constraintTop_toBottomOf="@+id/TE_descrip" />
 
     <TextView
-        android:id="@+id/TV_descrip"
+        android:id="@+id/TE_descrip"
         android:layout_width="215dp"
         android:layout_height="39dp"
         android:layout_marginTop="8dp"
@@ -105,10 +105,10 @@
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/TV_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/TE_titulo_request" />
 
     <TextView
-        android:id="@+id/TV_titulo"
+        android:id="@+id/TE_titulo_request"
         android:layout_width="215dp"
         android:layout_height="18dp"
         android:layout_marginTop="69dp"
@@ -120,7 +120,7 @@
         app:layout_constraintTop_toTopOf="@+id/view2" />
 
     <TextView
-        android:id="@+id/TV_autor"
+        android:id="@+id/TE_autor"
         android:layout_width="205dp"
         android:layout_height="23dp"
         android:layout_marginStart="16dp"

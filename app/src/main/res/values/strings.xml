@@ -34,4 +34,15 @@
     <string name="txnec">Necesita</string>
     <string name="txdesc">Descripcion</string>
     <string name="txfecha">Fecha</string>
+    <string name="titutlo_notificationes">Notificaciones</string>
+    <string name="numero_service_requests">0</string>
+    <string name="titulo_service_request">Service Request</string>
+    <string name="titulo_approveignore_requests">Approve or ignore requests</string>
+    <string name="screen_title_requests">Requests</string>
+    <string name="Service_requests_title">Services</string>
+    <string name="Tool_requests_title">Tools</string>
+    <string name="requesting_card_txt">Requesting</string>
+    <string name="comment_card_txt">Comment</string>
+    <string name="decline_btn">Decline</string>
+    <string name="Accept_btn">Accept</string>
 </resources>
