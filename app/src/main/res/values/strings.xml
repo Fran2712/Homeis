@@ -45,4 +45,7 @@
     <string name="comment_card_txt">Comment</string>
     <string name="decline_btn">Decline</string>
     <string name="Accept_btn">Accept</string>
+    <string name="chatroom_screen_title">Chatroom</string>
+    //EL STRING 'searchbar_hint' USA SYMBOLOS ESPECIALES VACIOS. !!!ES POSIBLE QUE DE ERROR!!!
+    <string name="searchbar_hint">‎‎‎‏‏‎ ‎‏‏‎ ‎Search</string>
 </resources>
