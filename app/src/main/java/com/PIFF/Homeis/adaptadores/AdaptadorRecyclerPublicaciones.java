@@ -69,7 +69,7 @@ public class AdaptadorRecyclerPublicaciones extends RecyclerView.Adapter<Adaptad
             this.tv_titulo = vista.findViewById(R.id.TV_servicio);
             this.tv_autor = vista.findViewById(R.id.TV_autor);
             this.tv_fecha = vista.findViewById(R.id.TV_fecha);
-            this.tv_descrip = vista.findViewById(R.id.TV_pregunta);
+            this.tv_descrip = vista.findViewById(R.id.TV_descrip);
             this.img_pfp = vista.findViewById(R.id.IMG_pfp);
         }
     }

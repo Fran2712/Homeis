@@ -35,52 +35,58 @@
 
     <TextView
         android:id="@+id/TV_txt_nec"
-        android:layout_width="44dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock_bold"
         android:text="@string/txop"
         android:textColor="@color/colorAccent4"
-        android:textSize="10dp"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/TV_descrip"
         app:layout_constraintEnd_toStartOf="@+id/TV_servicio"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/IMG_pfp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/IMG_pfp"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/TV_descrip"
-        android:layout_width="283dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="285dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="12dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock_bold"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/TV_servicio" />
+        app:layout_constraintStart_toStartOf="@+id/view2" />
 
     <TextView
         android:id="@+id/TV_servicio"
-        android:layout_width="215dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="69dp"
+        android:layout_width="216dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginBottom="12dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock_bold"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/TV_descrip"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/view2" />
+        app:layout_constraintTop_toBottomOf="@+id/TV_autor"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/TV_autor"
         android:layout_width="205dp"
         android:layout_height="23dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="33dp"
         android:layout_marginTop="12dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock_bold"

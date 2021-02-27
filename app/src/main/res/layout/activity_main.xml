@@ -24,7 +24,7 @@
     <View
         android:id="@+id/vista_contenedor"
         android:layout_width="match_parent"
-        android:layout_height="516dp"
+        android:layout_height="510dp"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:background="@drawable/shapecard2"
@@ -39,15 +39,15 @@
 
     <ImageView
         android:id="@+id/IMG_bg_full"
-        android:layout_width="506dp"
-        android:layout_height="864dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fullbg"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fullbg" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_publicaciones"

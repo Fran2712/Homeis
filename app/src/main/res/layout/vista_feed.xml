@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp">
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
@@ -37,7 +36,7 @@
         android:id="@+id/TV_txt_nec"
         android:layout_width="44dp"
         android:layout_height="18dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock_bold"
@@ -53,7 +52,7 @@
         android:id="@+id/TV_txt_desc"
         android:layout_width="53dp"
         android:layout_height="18dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="15dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock_bold"
@@ -61,7 +60,7 @@
         android:textColor="@color/colorAccent4"
         android:textSize="10dp"
         app:layout_constraintEnd_toStartOf="@+id/TV_pregunta"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.971"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/TV_txt_nec" />
 
@@ -69,7 +68,7 @@
         android:id="@+id/TV_txt_fecha"
         android:layout_width="35dp"
         android:layout_height="17dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="24dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock_bold"
@@ -78,7 +77,7 @@
         android:textSize="10dp"
         app:layout_constraintEnd_toStartOf="@+id/TV_fecha"
 
-        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintHorizontal_bias="0.772"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/TV_txt_desc" />
 
@@ -100,7 +99,7 @@
         android:id="@+id/TV_pregunta"
         android:layout_width="215dp"
         android:layout_height="39dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock_bold"
         android:textColor="@color/design_default_color_on_secondary"
@@ -112,7 +111,7 @@
         android:id="@+id/TV_servicio"
         android:layout_width="215dp"
         android:layout_height="18dp"
-        android:layout_marginTop="69dp"
+        android:layout_marginTop="64dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock_bold"
         android:textColor="@color/design_default_color_on_secondary"
@@ -143,15 +142,14 @@
 
     <ImageView
         android:id="@+id/IMG_pfp"
-        android:layout_width="55dp"
-        android:layout_height="45dp"
+        android:layout_width="68dp"
+        android:layout_height="53dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/foto_perfil"
         android:elevation="8dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2"
-        tools:srcCompat="@tools:sample/avatars" />
-
+        app:layout_constraintTop_toTopOf="@+id/view2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
