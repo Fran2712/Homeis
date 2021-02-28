@@ -10,6 +10,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,19 +20,30 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.PIFF.Homeis.entidad.Ciudad;
+import com.PIFF.Homeis.entidad.Direccion;
 import com.PIFF.Homeis.entidad.Pais;
+import com.PIFF.Homeis.entidad.Usuario;
+import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.PIFF.Homeis.persistencia.AccesoJackson;
 import com.PIFF.Homeis.persistencia.AccesoJsoup;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.List;
 
-public class Direccion extends AppCompatActivity {
+
+public class DireccionScreen extends AppCompatActivity {
     private Button btn_regster;
     private Spinner spn_paises;
     private Spinner spn_ciudades;
     private Handler manejador;
+    private TextInputLayout ed_direccion1,ed_direccion2,ed_cp;
+    private int posicion_pais;
+    private int posicion_ciudad;
+    private String nombre_pais;
+    private String nombre_ciudad;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +51,12 @@ public class Direccion extends AppCompatActivity {
         btn_regster = findViewById(R.id.BTN_regster);
         spn_paises = findViewById(R.id.SPN_paises);
         spn_ciudades = findViewById(R.id.SPN_ciudades);
+        ed_direccion1 = findViewById(R.id.ED_address1);
+        ed_direccion2 = findViewById(R.id.ED_address2);
+        ed_cp = findViewById(R.id.ED_postalcode);
+
+        //Deshabilitamos boton al iniciar el activity
+        btn_regster.setEnabled(false);
 
         // Adaptador opcional hasta que carga el adaptador de los paises para que no muestre el spinner vacio
         String[] selecciona = {"Selecciona un pais..."};
@@ -59,7 +78,7 @@ public class Direccion extends AppCompatActivity {
                 lista_paises.remove(0);
                 lista_paises.add(0,pais_placeHolder);
 
-                ArrayAdapter<Pais> adapter = new ArrayAdapter<Pais>(Direccion.this,R.layout.support_simple_spinner_dropdown_item,lista_paises){
+                ArrayAdapter<Pais> adapter = new ArrayAdapter<Pais>(DireccionScreen.this,R.layout.support_simple_spinner_dropdown_item,lista_paises){
                     @Override
                     public boolean isEnabled(int position) {
                         if(position==0){
@@ -104,9 +123,14 @@ public class Direccion extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(position!=0){
                     Pais pSeleccionado = (Pais) spn_paises.getItemAtPosition(position);
+                    posicion_pais = position;
+                    nombre_pais = pSeleccionado.getNombre_pais();
                     AssetManager am = getAssets();
                     List<Ciudad> ciudades = AccesoJackson.obtenerJsonCiudades(am,pSeleccionado.getIso_pais());
-                    ArrayAdapter<Ciudad> adapter = new ArrayAdapter<Ciudad>(Direccion.this,R.layout.support_simple_spinner_dropdown_item,ciudades){
+                    Ciudad ciudad = new Ciudad();
+                    ciudad.setCiudad("Selecciona una ciudad...");
+                    ciudades.add(0,ciudad);
+                    ArrayAdapter<Ciudad> adapter = new ArrayAdapter<Ciudad>(DireccionScreen.this,R.layout.support_simple_spinner_dropdown_item,ciudades){
                         @Override
                         public boolean isEnabled(int position) {
                             if(position==0){
@@ -142,15 +166,62 @@ public class Direccion extends AppCompatActivity {
 
             }
         });
+        spn_ciudades.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position!=0){
+                    Ciudad ciudad= (Ciudad)spn_ciudades.getItemAtPosition(position);
+                    posicion_ciudad = position;
+                    nombre_ciudad = ciudad.getCiudad();
+                    String direccion1 = ed_direccion1.getEditText().getText().toString();
+                    String codigoPostal = ed_cp.getEditText().getText().toString();
+                    boolean validado = comprobarCampos(direccion1,codigoPostal,posicion_pais,posicion_ciudad);
+                    btn_regster.setEnabled(validado);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         btn_regster.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Direccion.this, MainActivity.class);
+                Direccion direccionPersona = new Direccion();
+                direccionPersona.setCiudad(nombre_ciudad);
+                direccionPersona.setCodigo_postal(ed_cp.getEditText().getText().toString());
+                direccionPersona.setDireccion_1(ed_direccion1.getEditText().getText().toString());
+                String direccion2 = ed_direccion2.getEditText().getText().toString();
+                if(direccion2.isEmpty() == false && !direccion2.equals(" ")){
+                    direccionPersona.setDireccion_2(direccion2);
+                }
+                direccionPersona.setPais(nombre_pais);
+                Usuario user = (Usuario) getIntent().getSerializableExtra("usuario");
+                user.setDireccion(direccionPersona);
+                AccesoFirebase.altaUsuario(user);
+                Toast.makeText(DireccionScreen.this,"Direccion dada de alta",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(DireccionScreen.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
         });
+    }
+    private boolean comprobarCampos(String direccion1, String codigoPostal, int pais_seleccionado, int ciudad_seleccionada) {
+        if(direccion1.isEmpty()){
+            ed_direccion1.setError("Campo vacio!!");
+            return false;
+        }
+        else if(codigoPostal.isEmpty()){
+            ed_cp.setError("Campo vacio!!");
+            return false;
+        }else if(posicion_pais==0 || posicion_ciudad==0){
+            return false;
+        }else{
+            return true;
+        }
+
     }
 }

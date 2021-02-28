@@ -54,17 +54,7 @@ public class AccesoJsoup implements Runnable {
 
 
                 paises.add(p);
-                //Log.d("datos",paises.toString());
             }
-            /*
-            for (Element elemento:lista_paises) {
-                Element pais = elemento.getElementsByTag("li").first();
-                Element nombre_pais = pais.getElementsByTag("b").first();
-                Log.d("datos",nombre_pais.text());
-
-
-            }
-             */
             Message mensaje = new Message();
             Bundle datos = new Bundle();
             datos.putSerializable("ARRAYLIST",(Serializable)paises);

@@ -59,7 +59,8 @@ public class RegisterScreen extends AppCompatActivity {
                     Toast.makeText(RegisterScreen.this,"El usuario ya existe",Toast.LENGTH_LONG).show();
                 }else{
                     AccesoFirebase.altaUsuario(user);
-                    Intent intent = new Intent(RegisterScreen.this, Direccion.class);
+                    Intent intent = new Intent(RegisterScreen.this, DireccionScreen.class);
+                    intent.putExtra("usuario",user);
                     startActivity(intent);
                 }
             }

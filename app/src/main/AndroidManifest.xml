@@ -20,7 +20,7 @@
             android:name=".LoginScreen"
             android:theme="@style/AppThemeNoBar" />
         <activity
-            android:name=".Direccion"
+            android:name=".DireccionScreen"
             android:theme="@style/AppThemeNoBar" />
         <activity
             android:name=".SplashScreen"

@@ -57,7 +57,7 @@ public class LoginScreen extends AppCompatActivity {
         txt_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginScreen.this, Direccion.class);
+                Intent intent = new Intent(LoginScreen.this, RegisterScreen.class);
                 startActivity(intent);
             }
         });

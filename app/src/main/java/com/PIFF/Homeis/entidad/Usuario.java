@@ -1,8 +1,11 @@
 package com.PIFF.Homeis.entidad;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
     private String email;
     private String password;
+    private Direccion direccion;
 
 
     public Usuario() {
@@ -29,5 +32,11 @@ public class Usuario {
         this.password = password;
     }
 
+    public Direccion getDireccion() {
+        return direccion;
+    }
 
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
 }
