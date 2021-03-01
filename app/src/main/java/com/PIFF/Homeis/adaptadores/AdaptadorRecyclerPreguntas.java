@@ -1,26 +1,33 @@
 package com.PIFF.Homeis.adaptadores;
 
+import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.PIFF.Homeis.Preguntas_screen;
 import com.PIFF.Homeis.R;
 import com.PIFF.Homeis.entidad.Pregunta;
-import com.PIFF.Homeis.entidad.Publicacion;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
 import java.util.ArrayList;
 
 public class AdaptadorRecyclerPreguntas extends RecyclerView.Adapter<AdaptadorRecyclerPreguntas.ContenedorDeVistas> {
     private ArrayList<Pregunta> lista_preguntas;
+    private Context context;
 
-    public AdaptadorRecyclerPreguntas(ArrayList<Pregunta> lista_preguntas) {
+    public AdaptadorRecyclerPreguntas(ArrayList<Pregunta> lista_preguntas, Preguntas_screen preguntas_screen) {
         this.lista_preguntas = lista_preguntas;
+        this.context = preguntas_screen;
     }
 
     @NonNull
@@ -46,7 +53,12 @@ public class AdaptadorRecyclerPreguntas extends RecyclerView.Adapter<AdaptadorRe
         Pregunta c = lista_preguntas.get(position);
         holder.tv_autor.setText(c.getAutor());
         holder.tv_pregunta.setText(c.getPregunta());
-
+        Glide.with(context)
+                .load(R.drawable.foto_perfil_ejemplo)
+                .centerCrop()
+                .circleCrop()
+                .transition(DrawableTransitionOptions.withCrossFade(500))
+                .into(holder.img_pfp);
         Log.d("Contenedor","Cvinculando la posicion" + position);
     }
 

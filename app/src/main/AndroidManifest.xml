@@ -10,8 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Preguntas_screen"
+            android:name=".HerramientasScreen"
             android:theme="@style/AppThemeNoBar"/>
+        <activity
+            android:name=".SocialScreen"
+            android:theme="@style/AppThemeNoBar" />
+        <activity
+            android:name=".Preguntas_screen"
+            android:theme="@style/AppThemeNoBar" />
         <activity
             android:name=".ServiciosScreen"
             android:theme="@style/AppThemeNoBar" />

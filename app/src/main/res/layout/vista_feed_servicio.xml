@@ -35,8 +35,8 @@
 
     <TextView
         android:id="@+id/TV_txt_nec"
-        android:layout_width="50dp"
-        android:layout_height="20dp"
+        android:layout_width="40dp"
+        android:layout_height="16dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="12dp"
@@ -45,10 +45,10 @@
         android:fontFamily="@font/overlock_bold"
         android:text="@string/txop"
         android:textColor="@color/colorAccent4"
-        android:textSize="11dp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/TV_descrip"
         app:layout_constraintEnd_toStartOf="@+id/TV_servicio"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toBottomOf="@+id/IMG_pfp"
         app:layout_constraintVertical_bias="0.0" />
@@ -60,7 +60,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginBottom="12dp"
         android:elevation="8dp"
-        android:fontFamily="@font/overlock_bold"
+        android:fontFamily="@font/overlock"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
@@ -69,8 +69,8 @@
 
     <TextView
         android:id="@+id/TV_servicio"
-        android:layout_width="216dp"
-        android:layout_height="20dp"
+        android:layout_width="230dp"
+        android:layout_height="19dp"
         android:layout_marginTop="33dp"
         android:layout_marginBottom="12dp"
         android:elevation="8dp"
@@ -80,19 +80,20 @@
         app:layout_constraintBottom_toTopOf="@+id/TV_descrip"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/TV_autor"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/TV_autor"
         android:layout_width="205dp"
         android:layout_height="23dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:elevation="8dp"
         android:fontFamily="@font/overlock_bold"
-        android:textColor="@color/design_default_color_on_secondary"
+        android:textColor="@color/colorPrimary"
         android:textSize="18dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/IMG_pfp"
         app:layout_constraintTop_toTopOf="@+id/view2" />
 
@@ -113,7 +114,6 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="@+id/view2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

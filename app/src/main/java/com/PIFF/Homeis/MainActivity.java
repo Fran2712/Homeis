@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         liata.add(c2);
         gestor = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        adapt = new AdaptadorRecyclerPublicaciones(liata);
+        adapt = new AdaptadorRecyclerPublicaciones(liata,MainActivity.this);
         rec.setAdapter(adapt);
         rec.setLayoutManager(gestor);
         //servicios
@@ -85,13 +85,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //herramientas
-        /*card1.setOnClickListener(new View.OnClickListener() {
+        card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ServiciosScreen.class);
+                Intent intent = new Intent(MainActivity.this, HerramientasScreen.class);
                 startActivity(intent);
             }
-        });*/
+        });
         //preguntas
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,10 +101,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //social
-        card3.setOnClickListener(new View.OnClickListener() {
+        card4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ServiciosScreen.class);
+                Intent intent = new Intent(MainActivity.this, SocialScreen.class);
                 startActivity(intent);
             }
         });

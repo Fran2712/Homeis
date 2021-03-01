@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_servicios"
+    android:background="@drawable/bg_herramientas"
 
     tools:context=".ServiciosScreen">
 
@@ -27,7 +27,7 @@
         android:layout_height="39dp"
         android:elevation="4dp"
         android:fontFamily="@font/overlock_bold"
-        android:text="@string/card4"
+        android:text="@string/card1"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="30dp"

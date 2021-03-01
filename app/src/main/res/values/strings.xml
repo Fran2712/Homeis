@@ -35,4 +35,6 @@
     <string name="txop">Ofrece</string>
     <string name="txdesc">Descripcion</string>
     <string name="txfecha">Fecha</string>
+
+    <string name="busca">Busca aqui</string>
 </resources>

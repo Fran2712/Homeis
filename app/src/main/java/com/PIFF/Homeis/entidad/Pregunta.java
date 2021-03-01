@@ -1,6 +1,7 @@
 package com.PIFF.Homeis.entidad;
 
-public class Pregunta {
+public class
+Pregunta {
 
     private String pregunta;
     private String autor;

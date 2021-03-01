@@ -7,18 +7,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerServicios;
-import com.PIFF.Homeis.entidad.Publicacion;
 import com.PIFF.Homeis.entidad.Servicio;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.MaterialShapeDrawable;
 
 import java.util.ArrayList;
-import java.util.Date;
 
-public class ServiciosScreen extends AppCompatActivity {
+public class HerramientasScreen extends AppCompatActivity {
 
     private RecyclerView rec;
     private RecyclerView.LayoutManager gestor2;
@@ -28,13 +25,13 @@ public class ServiciosScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_servicios_screen);
+        setContentView(R.layout.activity_herramientas_screen);
         rec = findViewById(R.id.RC_servivios);
         coo = findViewById(R.id.coordinator);
 
-        Servicio c1 = new Servicio("Mandarina","Li,pio genial","Por si acaso necesitas una sierra radial poes eso, yo se la dejo");
-        Servicio c2 = new Servicio("Vegetta777","Electricista gratis xd","Hey muy buenas a todos guapisimos, aqui tengo una aspiradora sin cable por si alguien la quiere");
-        Servicio c3 = new Servicio("Arnold","Cocinero","Termine de cavar un hueco en el campo y no voy a usar la pala, si alguien la quiere que me lo diga");
+        Servicio c1 = new Servicio("Pera896","Sierra radial","Por si acaso necesitas una sierra radial poes eso, yo se la dejo");
+        Servicio c2 = new Servicio("Willy","Aspiradora sin cablee pro","Hey muy buenas a todos guapisimos, aqui tengo una aspiradora sin cable por si alguien la quiere");
+        Servicio c3 = new Servicio("Hernangomez","Pala","Termine de cavar un hueco en el campo y no voy a usar la pala, si alguien la quiere que me lo diga");
 
         ArrayList<Servicio> liata = new ArrayList<>();
 
@@ -43,7 +40,7 @@ public class ServiciosScreen extends AppCompatActivity {
         liata.add(c3);
 
         gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        adapt = new AdaptadorRecyclerServicios(liata, ServiciosScreen.this);
+        adapt = new AdaptadorRecyclerServicios(liata, HerramientasScreen.this);
         rec.setAdapter(adapt);
         rec.setLayoutManager(gestor2);
 
