@@ -23,11 +23,12 @@
 
     <View
         android:id="@+id/vista_contenedor"
-        android:layout_width="395dp"
-        android:layout_height="516dp"
+        android:layout_width="match_parent"
+        android:layout_height="510dp"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:background="@drawable/shapecard2"
+        android:backgroundTint="@color/design_default_color_background"
         android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,22 +39,24 @@
 
     <ImageView
         android:id="@+id/IMG_bg_full"
-        android:layout_width="462dp"
-        android:layout_height="825dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fullbg"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fullbg" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_publicaciones"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/vista_contenedor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TV_necesi"

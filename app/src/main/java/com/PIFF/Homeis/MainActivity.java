@@ -1,22 +1,17 @@
 package com.PIFF.Homeis;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.Transformation;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.material.bottomappbar.BottomAppBar;
+import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
+import com.PIFF.Homeis.entidad.Publicacion;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -38,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView txt_card_4;
     private RecyclerView.LayoutManager gestor;
     private RecyclerView.LayoutManager gestor2;
-    private  AdaptadorRecyclerPublicaciones adapt;
+    private AdaptadorRecyclerPublicaciones adapt;
     private  ImageView img_serv;
     private  ImageView img_preg;
     private  ImageView img_herr;
@@ -78,10 +73,41 @@ public class MainActivity extends AppCompatActivity {
         liata.add(c2);
         gestor = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        adapt = new AdaptadorRecyclerPublicaciones(liata);
+        adapt = new AdaptadorRecyclerPublicaciones(liata,MainActivity.this);
         rec.setAdapter(adapt);
         rec.setLayoutManager(gestor);
-
+        //servicios
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ServiciosScreen.class);
+                startActivity(intent);
+            }
+        });
+        //herramientas
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HerramientasScreen.class);
+                startActivity(intent);
+            }
+        });
+        //preguntas
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Preguntas_screen.class);
+                startActivity(intent);
+            }
+        });
+        //social
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SocialScreen.class);
+                startActivity(intent);
+            }
+        });
         ocul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

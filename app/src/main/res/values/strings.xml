@@ -32,6 +32,7 @@
     <string name="card4">Servicios</string>
 
     <string name="txnec">Necesita</string>
+    <string name="txop">Ofrece</string>
     <string name="txdesc">Descripcion</string>
     <string name="txfecha">Fecha</string>
     <string name="titutlo_notificationes">Notificaciones</string>
@@ -45,4 +46,6 @@
     <string name="comment_card_txt">Comment</string>
     <string name="decline_btn">Decline</string>
     <string name="Accept_btn">Accept</string>
+
+    <string name="busca">Busca aqui</string>
 </resources>

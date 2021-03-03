@@ -59,6 +59,7 @@ public class LoginScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginScreen.this, Direccion.class);
                 startActivity(intent);
+
             }
         });
 

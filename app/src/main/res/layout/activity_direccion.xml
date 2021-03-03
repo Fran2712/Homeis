@@ -7,7 +7,6 @@
     android:foreground="@drawable/custom_spinner"
     tools:context=".Direccion">
 
-
     <View
         android:id="@+id/vista_contenedor"
         android:layout_width="343dp"
@@ -46,14 +45,12 @@
         app:layout_constraintGuide_begin="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="70dp" />
-
     <ImageView
         android:id="@+id/IMG_bg"
         android:layout_width="541dp"
@@ -87,8 +84,8 @@
         android:elevation="8dp"
         android:ems="10"
         android:hint="@string/address1"
-        android:inputType="text"
         app:boxBackgroundColor="@android:color/white"
+        android:inputType="text"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
@@ -197,9 +194,9 @@
         android:layout_marginTop="23dp"
         android:elevation="8dp"
         android:ems="10"
+        app:boxBackgroundColor="@android:color/white"
         android:hint="@string/country"
         android:inputType="text"
-        app:boxBackgroundColor="@android:color/white"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
@@ -233,7 +230,6 @@
         app:layout_constraintTop_toBottomOf="@+id/Country"
 
         app:layout_constraintVertical_bias="0.411" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
