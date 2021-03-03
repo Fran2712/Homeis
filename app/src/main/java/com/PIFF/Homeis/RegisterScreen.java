@@ -1,6 +1,5 @@
 package com.PIFF.Homeis;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,19 +8,15 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.PIFF.Homeis.cifrado.ResumenHash;
 import com.PIFF.Homeis.entidad.Usuario;
 import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.google.android.material.checkbox.MaterialCheckBox;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -63,7 +58,10 @@ public class RegisterScreen extends AppCompatActivity {
                     user.setPassword(pass_cifrada);
                     AccesoFirebase.altaUsuario(user);
                     Intent intent = new Intent(RegisterScreen.this, DireccionScreen.class);
+<<<<<<< HEAD
                     intent.putExtra("usuario",user);
+=======
+>>>>>>> 77a49781e731a9cf758daf19b4755f749ab992ed
                     startActivity(intent);
                 }
             }

@@ -1,4 +1,4 @@
-package com.PIFF.Homeis;
+package com.PIFF.Homeis.entidad;
 
 import java.util.Date;
 
