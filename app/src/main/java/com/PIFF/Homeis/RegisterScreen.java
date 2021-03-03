@@ -14,6 +14,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.PIFF.Homeis.cifrado.ResumenHash;
 import com.PIFF.Homeis.entidad.Usuario;
 import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.google.android.material.checkbox.MaterialCheckBox;
@@ -58,6 +59,8 @@ public class RegisterScreen extends AppCompatActivity {
                 if (usuario_existente || usuariosBBDD.isEmpty()){
                     Toast.makeText(RegisterScreen.this,"El usuario ya existe",Toast.LENGTH_LONG).show();
                 }else{
+                    String pass_cifrada= ResumenHash.cifrarPassword(user.getPassword());
+                    user.setPassword(pass_cifrada);
                     AccesoFirebase.altaUsuario(user);
                     Intent intent = new Intent(RegisterScreen.this, DireccionScreen.class);
                     intent.putExtra("usuario",user);
