@@ -31,7 +31,7 @@ public class AdaptadorRecyclerPublicaciones extends RecyclerView.Adapter<Adaptad
     @NonNull
     @Override
     public ContenedorDeVistas onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        final View vista = LayoutInflater.from(parent.getContext()).inflate(R.layout.vista_feed, parent, false);
+        final View vista = LayoutInflater.from(parent.getContext()).inflate(R.layout.vista_feed_pruebas, parent, false);
         TextView tv_titulo = vista.findViewById(R.id.TV_servicio);
         TextView tv_autor = vista.findViewById(R.id.TV_autor);
         TextView tv_descrip = vista.findViewById(R.id.TV_descrip);
