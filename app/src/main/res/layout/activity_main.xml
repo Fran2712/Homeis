@@ -6,13 +6,315 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="28dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="28dp" />
+
+
+    <View
+        android:id="@+id/vista_contenedor"
+        android:layout_width="match_parent"
+        android:layout_height="510dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/shapecard2"
+        android:backgroundTint="@color/design_default_color_background"
+        android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <ImageView
+        android:id="@+id/IMG_bg_full"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fullbg"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_publicaciones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/vista_contenedor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TV_necesi"
+        android:layout_width="276dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="12dp"
+        android:elevation="4dp"
+        android:fontFamily="@font/overlock_bold"
+        android:text="@string/quenec"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/vista_contenedor"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <View
+        android:id="@+id/card_1"
+        android:layout_width="152dp"
+        android:layout_height="136dp"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="108dp"
+        android:layout_weight="1"
+        android:background="@drawable/shapecard3"
+        android:backgroundTint="@color/colorAccent"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/vista_contenedor" />
+
+    <TextView
+        android:id="@+id/TV_card_1"
+        android:layout_width="117dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="35dp"
+        android:elevation="5dp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/card1"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_1"
+        app:layout_constraintEnd_toEndOf="@+id/card_1"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="@+id/card_1"
+        app:layout_constraintTop_toTopOf="@+id/card_1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/card_2"
+        android:layout_width="152dp"
+        android:layout_height="136dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="37dp"
+        android:layout_weight="1"
+        android:background="@drawable/shapecard3"
+        android:backgroundTint="@color/colorAccent2"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/card_1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/TV_card_2"
+        android:layout_width="87dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="41dp"
+        android:elevation="5dp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/card3"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_2"
+        app:layout_constraintEnd_toEndOf="@+id/card_2"
+        app:layout_constraintStart_toStartOf="@+id/card_2"
+        app:layout_constraintTop_toTopOf="@+id/card_2" />
+
+
+    <View
+        android:id="@+id/card_3"
+        android:layout_width="152dp"
+        android:layout_height="136dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="128dp"
+        android:layout_weight="1"
+        android:background="@drawable/shapecard3"
+        android:backgroundTint="@color/colorAccent3"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/TV_card_3"
+        android:layout_width="72dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="43dp"
+        android:elevation="5dp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/card4"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_3"
+        app:layout_constraintEnd_toEndOf="@+id/card_3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/card_3"
+        app:layout_constraintTop_toTopOf="@+id/card_3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/card_4"
+        android:layout_width="152dp"
+        android:layout_height="136dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="108dp"
+        android:layout_weight="1"
+        android:background="@drawable/shapecard3"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/card_1"
+        app:layout_constraintTop_toTopOf="@+id/vista_contenedor" />
+
+    <TextView
+        android:id="@+id/TV_card_4"
+        android:layout_width="51dp"
+        android:layout_height="30dp"
+        android:elevation="5dp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/card2"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_4"
+        app:layout_constraintEnd_toEndOf="@+id/card_4"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="@+id/card_4"
+        app:layout_constraintTop_toTopOf="@+id/card_4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/IMG_ocultar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="8dp"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vista_contenedor"
+        app:srcCompat="@drawable/ic_menu_on_surface_24dp" />
+
+    <ImageView
+        android:id="@+id/IMG_preg"
+        android:layout_width="59dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="48dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_2"
+        app:layout_constraintEnd_toEndOf="@+id/card_2"
+        app:layout_constraintStart_toStartOf="@+id/card_2"
+        app:layout_constraintTop_toTopOf="@+id/card_2"
+        app:srcCompat="@drawable/preguntas"/>
+
+    <ImageView
+        android:id="@+id/IMG_serv"
+        android:layout_width="59dp"
+        android:layout_height="55dp"
+
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="48dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_3"
+        app:layout_constraintEnd_toEndOf="@+id/card_3"
+        app:layout_constraintStart_toStartOf="@+id/card_3"
+        app:layout_constraintTop_toTopOf="@+id/card_3"
+        app:srcCompat="@drawable/servicios" />
+
+    <ImageView
+        android:id="@+id/IMG_herr"
+        android:layout_width="59dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="48dp"
+
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="48dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_1"
+        app:layout_constraintEnd_toEndOf="@+id/card_1"
+        app:layout_constraintStart_toStartOf="@+id/card_1"
+        app:layout_constraintTop_toTopOf="@+id/card_1"
+        app:srcCompat="@drawable/herramientas" />
+
+    <ImageView
+        android:id="@+id/IMG_social"
+        android:layout_width="59dp"
+        android:layout_height="55dp"
+
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="48dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_4"
+        app:layout_constraintEnd_toEndOf="@+id/card_4"
+        app:layout_constraintStart_toStartOf="@+id/card_4"
+        app:layout_constraintTop_toTopOf="@+id/card_4"
+        app:srcCompat="@drawable/social" />
+
+    <!-- Bottom Appbar
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            app:fabAlignmentMode="center"
+            app:menu="@menu/bottom_app_bar_menu"
+            app:navigationIcon="@drawable/ic_menu_on_surface_24dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_on_secondary_24dp"
+            app:fabSize="normal"
+            app:layout_anchor="@+id/bottom_app_bar"
+            tools:ignore="ContentDescription" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@
     android:background="@android:color/white">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/vista_contenedor"
         android:layout_width="333dp"
         android:layout_height="294dp"
         android:layout_gravity="center"
@@ -48,17 +48,19 @@
         android:hint="@string/mail"
         android:inputType="textEmailAddress"
         app:boxCornerRadiusBottomEnd="20dp"
+        app:boxBackgroundColor="@android:color/white"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/view">
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/vista_contenedor">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_email"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
 
+            android:layout_height="match_parent"
             android:fontFamily="@font/overlock" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -69,6 +71,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
         android:elevation="8dp"
+        app:boxBackgroundColor="@android:color/white"
         android:ems="10"
         android:hint="@string/pass"
         android:inputType="textPassword"
@@ -83,6 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ED_email">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_pass"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/overlock" />
@@ -103,14 +107,14 @@
         android:fontFamily="@font/overlock"
         android:stateListAnimator="@null"
         android:text="@string/login"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/vista_contenedor"
+        app:layout_constraintEnd_toEndOf="@+id/vista_contenedor"
+        app:layout_constraintStart_toStartOf="@+id/vista_contenedor"
         app:layout_constraintTop_toBottomOf="@+id/ED_pass"
         app:layout_constraintVertical_bias="0.41" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -125,16 +129,15 @@
 
     <ImageView
         android:id="@+id/IMG_bg"
-        android:layout_width="541dp"
+        android:layout_width="match_parent"
         android:layout_height="313dp"
+        android:background="@drawable/bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/bg"
-        tools:srcCompat="@drawable/bg" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <TextView
@@ -146,7 +149,7 @@
         android:text="@string/logon_msg"
         android:textColor="@color/design_default_color_background"
         android:textSize="30dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -161,7 +164,7 @@
         android:text="@string/register"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/BTN_login"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/ED_pass"
         app:layout_constraintVertical_bias="1.0" />
 
