@@ -5,21 +5,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.SearchView;
-import android.widget.Toast;
 
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPreguntas;
-import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
 import com.PIFF.Homeis.entidad.Pregunta;
-import com.PIFF.Homeis.entidad.Publicacion;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.MaterialShapeDrawable;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Preguntas_screen extends AppCompatActivity {
 

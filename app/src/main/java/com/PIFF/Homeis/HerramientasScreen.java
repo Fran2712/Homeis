@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerServicios;
+import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
 import com.PIFF.Homeis.entidad.Servicio;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.shape.CornerFamily;
@@ -19,7 +19,7 @@ public class HerramientasScreen extends AppCompatActivity {
 
     private RecyclerView rec;
     private RecyclerView.LayoutManager gestor2;
-    private AdaptadorRecyclerServicios adapt;
+    private AdaptadorRecyclerPublicaciones adapt;
     private CoordinatorLayout coo;
 
     @Override
@@ -40,7 +40,7 @@ public class HerramientasScreen extends AppCompatActivity {
         liata.add(c3);
 
         gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        adapt = new AdaptadorRecyclerServicios(liata, HerramientasScreen.this);
+        adapt = new AdaptadorRecyclerPublicaciones(liata, HerramientasScreen.this);
         rec.setAdapter(adapt);
         rec.setLayoutManager(gestor2);
 

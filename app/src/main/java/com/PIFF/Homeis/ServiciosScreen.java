@@ -8,21 +8,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
-import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerServicios;
-import com.PIFF.Homeis.entidad.Publicacion;
 import com.PIFF.Homeis.entidad.Servicio;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.MaterialShapeDrawable;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class ServiciosScreen extends AppCompatActivity {
 
     private RecyclerView rec;
     private RecyclerView.LayoutManager gestor2;
-    private AdaptadorRecyclerServicios adapt;
+    private AdaptadorRecyclerPublicaciones adapt;
     private CoordinatorLayout coo;
 
     @Override
@@ -43,7 +40,7 @@ public class ServiciosScreen extends AppCompatActivity {
         liata.add(c3);
 
         gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        adapt = new AdaptadorRecyclerServicios(liata, ServiciosScreen.this);
+        adapt = new AdaptadorRecyclerPublicaciones(liata, ServiciosScreen.this);
         rec.setAdapter(adapt);
         rec.setLayoutManager(gestor2);
 

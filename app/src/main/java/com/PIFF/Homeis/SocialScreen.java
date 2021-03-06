@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerServicios;
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerSocial;
 import com.PIFF.Homeis.entidad.PublicacionSocial;
 import com.google.android.material.bottomappbar.BottomAppBar;
