@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageButton
-                    android:id="@+id/first_menu_item"
+                    android:id="@+id/home_menu_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -103,21 +103,21 @@
                     android:src="@drawable/home_icon"
                     android:backgroundTint="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/second_menu_item"
+                    app:layout_constraintEnd_toStartOf="@+id/chat_menu_button"
                     app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
-                    android:id="@+id/second_menu_item"
+                    android:id="@+id/chat_menu_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@android:color/white"
                     android:src="@drawable/messages"
-                    app:layout_constraintBottom_toBottomOf="@+id/first_menu_item"
+                    app:layout_constraintBottom_toBottomOf="@+id/home_menu_button"
                     app:layout_constraintEnd_toStartOf="@+id/placeholder"
                     app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toEndOf="@+id/first_menu_item" />
+                    app:layout_constraintStart_toEndOf="@+id/home_menu_button" />
 
                 <View
                     android:id="@+id/placeholder"
@@ -125,34 +125,34 @@
                     android:layout_height="0dp"
                     android:backgroundTint="@android:color/white"
                     android:visibility="invisible"
-                    app:layout_constraintBottom_toBottomOf="@+id/first_menu_item"
-                    app:layout_constraintEnd_toStartOf="@+id/third_menu_item"
+                    app:layout_constraintBottom_toBottomOf="@+id/home_menu_button"
+                    app:layout_constraintEnd_toStartOf="@+id/notifi_menu_button"
                     app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toEndOf="@+id/second_menu_item"
-                    app:layout_constraintTop_toTopOf="@+id/first_menu_item" />
+                    app:layout_constraintStart_toEndOf="@+id/chat_menu_button"
+                    app:layout_constraintTop_toTopOf="@+id/home_menu_button" />
 
                 <ImageButton
-                    android:id="@+id/third_menu_item"
+                    android:id="@+id/notifi_menu_button"
                     android:layout_width="0dp"
                     android:backgroundTint="@android:color/white"
                     android:layout_height="wrap_content"
                     android:src="@drawable/notifications"
-                    app:layout_constraintBottom_toBottomOf="@+id/first_menu_item"
-                    app:layout_constraintEnd_toStartOf="@+id/fourth_menu_item"
+                    app:layout_constraintBottom_toBottomOf="@+id/home_menu_button"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_menu_button"
                     app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toEndOf="@+id/placeholder" />
 
                 <ImageButton
-                    android:id="@+id/fourth_menu_item"
+                    android:id="@+id/profile_menu_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@android:color/white"
                     android:src="@drawable/profilepic"
-                    app:layout_constraintBottom_toBottomOf="@+id/first_menu_item"
+                    app:layout_constraintBottom_toBottomOf="@+id/home_menu_button"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toEndOf="@+id/third_menu_item"
-                    app:layout_constraintTop_toTopOf="@+id/first_menu_item" />
+                    app:layout_constraintStart_toEndOf="@+id/notifi_menu_button"
+                    app:layout_constraintTop_toTopOf="@+id/home_menu_button" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

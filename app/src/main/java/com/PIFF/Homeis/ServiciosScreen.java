@@ -5,7 +5,9 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
 import com.PIFF.Homeis.entidad.Servicio;
@@ -56,6 +58,13 @@ public class ServiciosScreen extends AppCompatActivity {
                         .setTopLeftCorner(CornerFamily.ROUNDED,radius)
                         .build());
 
-
+        //Listeners Bottom app Bar
+        findViewById(R.id.home_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ServiciosScreen.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
