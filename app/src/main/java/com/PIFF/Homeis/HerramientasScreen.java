@@ -5,9 +5,11 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
-import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerServicios;
+import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
 import com.PIFF.Homeis.entidad.Servicio;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.shape.CornerFamily;
@@ -19,7 +21,7 @@ public class HerramientasScreen extends AppCompatActivity {
 
     private RecyclerView rec;
     private RecyclerView.LayoutManager gestor2;
-    private AdaptadorRecyclerServicios adapt;
+    private AdaptadorRecyclerPublicaciones adapt;
     private CoordinatorLayout coo;
 
     @Override
@@ -40,7 +42,7 @@ public class HerramientasScreen extends AppCompatActivity {
         liata.add(c3);
 
         gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        adapt = new AdaptadorRecyclerServicios(liata, HerramientasScreen.this);
+        adapt = new AdaptadorRecyclerPublicaciones(liata, HerramientasScreen.this);
         rec.setAdapter(adapt);
         rec.setLayoutManager(gestor2);
 
@@ -56,6 +58,13 @@ public class HerramientasScreen extends AppCompatActivity {
                         .setTopLeftCorner(CornerFamily.ROUNDED,radius)
                         .build());
 
-
+        //Listeners Bottom app Bar
+        findViewById(R.id.home_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HerramientasScreen.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

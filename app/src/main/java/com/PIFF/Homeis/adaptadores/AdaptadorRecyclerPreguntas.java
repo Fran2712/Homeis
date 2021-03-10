@@ -1,16 +1,22 @@
 package com.PIFF.Homeis.adaptadores;
 
+import android.animation.LayoutTransition;
 import android.content.Context;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.PIFF.Homeis.Preguntas_screen;
@@ -37,12 +43,27 @@ public class AdaptadorRecyclerPreguntas extends RecyclerView.Adapter<AdaptadorRe
         TextView tv_autor = vista.findViewById(R.id.TV_autor);
         TextView tv_pregunta = vista.findViewById(R.id.TV_pregunta);
         ImageView img_pfp = vista.findViewById(R.id.IMG_pfp);
+        final LinearLayout hiddenView = vista.findViewById(R.id.hidden_view);
+        final CardView cardView = vista.findViewById(R.id.base_cardview);
+        final ImageButton arrow= vista.findViewById(R.id.arrow_button);
         ContenedorDeVistas contenedor = new ContenedorDeVistas(vista);
         Log.d("Contenedor","Creando contenedor de vistas");
-        vista.setOnClickListener(new View.OnClickListener() {
+        arrow.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(final View view) {
+            public void onClick(View view) {
+                if (hiddenView.getVisibility() == View.VISIBLE) {
+                    hiddenView.setVisibility(View.GONE);
+                    arrow.setImageResource(R.drawable.ic_baseline_expand_more_24);
+                    vista.getLayoutParams().height= 360;
+                    TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
+                }
+                else {
 
+                    hiddenView.setVisibility(View.VISIBLE);
+                    arrow.setImageResource(R.drawable.ic_baseline_expand_less_24);
+                    vista.getLayoutParams().height=600;
+                    TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
+                }
             }
         });
         return contenedor;
@@ -71,12 +92,19 @@ public class AdaptadorRecyclerPreguntas extends RecyclerView.Adapter<AdaptadorRe
     public static class ContenedorDeVistas extends RecyclerView.ViewHolder {
         public TextView tv_pregunta, tv_autor;
         public ImageView img_pfp;
+        public ImageButton arrow;
+        private LinearLayout hiddenView;
+        private CardView cardView;
+
 
         public ContenedorDeVistas(View vista) {
             super(vista);
             this.tv_pregunta = vista.findViewById(R.id.TV_pregunta);
             this.tv_autor = vista.findViewById(R.id.TV_autor);
             this.img_pfp = vista.findViewById(R.id.IMG_pfp);
+            this.arrow = vista.findViewById(R.id.arrow_button);
+            this.hiddenView = vista.findViewById(R.id.hidden_view);
+            this.cardView = vista.findViewById(R.id.base_cardview);
         }
     }
 
