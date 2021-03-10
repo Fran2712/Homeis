@@ -1,6 +1,5 @@
 package com.PIFF.Homeis;
 
-import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerNotification;
 import com.PIFF.Homeis.entidad.Notificacion;
+import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.shape.CornerFamily;
+import com.google.android.material.shape.MaterialShapeDrawable;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -56,6 +59,39 @@ public class NotificationsScreen extends AppCompatActivity {
         adapt = new AdaptadorRecyclerNotification(salsa);
         rec.setAdapter(adapt);
         rec.setLayoutManager(gestor);
+        // Borde redondo Bottom appbar
+        float radius = 80;
+        BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
+
+        MaterialShapeDrawable bottomBarBackground = (MaterialShapeDrawable) bottomAppBar.getBackground();
+        bottomBarBackground.setShapeAppearanceModel(
+                bottomBarBackground.getShapeAppearanceModel()
+                        .toBuilder()
+                        .setTopRightCorner(CornerFamily.ROUNDED,radius)
+                        .setTopLeftCorner(CornerFamily.ROUNDED,radius)
+                        .build());
+        //Listeners Bottom app Bar
+        findViewById(R.id.home_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NotificationsScreen.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.chat_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NotificationsScreen.this, ChatroomScreen.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.notifi_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NotificationsScreen.this, RequestsScreen.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public int getServiceRequestCount(){

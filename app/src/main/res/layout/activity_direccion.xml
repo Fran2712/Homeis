@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:foreground="@drawable/custom_spinner"
-    tools:context=".Direccion">
+    android:foreground="@drawable/custom_spinner">
 
     <View
         android:id="@+id/vista_contenedor"
@@ -194,10 +193,9 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="23dp"
         android:elevation="8dp"
-<<<<<<< HEAD
         android:theme="@style/ThemeSpinner"
         style="@style/Widget.AppCompat.Spinner.Underlined"
-=======
+
         android:ems="10"
         app:boxBackgroundColor="@android:color/white"
         android:hint="@string/country"
@@ -206,7 +204,7 @@
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
->>>>>>> 77a49781e731a9cf758daf19b4755f749ab992ed
+
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline8"

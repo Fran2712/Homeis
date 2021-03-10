@@ -58,10 +58,7 @@ public class RegisterScreen extends AppCompatActivity {
                     user.setPassword(pass_cifrada);
                     AccesoFirebase.altaUsuario(user);
                     Intent intent = new Intent(RegisterScreen.this, DireccionScreen.class);
-<<<<<<< HEAD
                     intent.putExtra("usuario",user);
-=======
->>>>>>> 77a49781e731a9cf758daf19b4755f749ab992ed
                     startActivity(intent);
                 }
             }

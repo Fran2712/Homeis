@@ -1,4 +1,4 @@
-package com.PIFF.Homeis;
+package com.PIFF.Homeis.adaptadores;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.PIFF.Homeis.R;
 import com.PIFF.Homeis.entidad.Request;
 
 import java.util.ArrayList;

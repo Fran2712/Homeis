@@ -66,6 +66,20 @@ public class SocialScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.chat_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SocialScreen.this, ChatroomScreen.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.notifi_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SocialScreen.this, NotificationsScreen.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

@@ -83,6 +83,20 @@ public class Preguntas_screen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.chat_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Preguntas_screen.this, ChatroomScreen.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.notifi_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Preguntas_screen.this, NotificationsScreen.class);
+                startActivity(intent);
+            }
+        });
 
 
 

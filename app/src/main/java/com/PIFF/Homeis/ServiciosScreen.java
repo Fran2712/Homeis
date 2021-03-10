@@ -66,5 +66,19 @@ public class ServiciosScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.chat_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ServiciosScreen.this, ChatroomScreen.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.notifi_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ServiciosScreen.this, NotificationsScreen.class);
+                startActivity(intent);
+            }
+        });
     }
 }

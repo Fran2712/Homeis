@@ -27,13 +27,7 @@
             android:theme="@style/AppThemeNoBar" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppThemeNoBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppThemeNoBar" />
         <activity
             android:name=".LoginScreen"
             android:theme="@style/AppThemeNoBar" />
@@ -43,8 +37,21 @@
         <activity
             android:name=".SplashScreen"
             android:theme="@style/AppThemeNoBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".ChatroomScreen"
+            android:theme="@style/AppThemeNoBar" />
+        <activity
+            android:name=".RequestsScreen"
+            android:theme="@style/AppThemeNoBar" />
+        <activity
+            android:name=".NotificationsScreen"
+            android:theme="@style/AppThemeNoBar" />
 
         <meta-data
             android:name="preloaded_fonts"

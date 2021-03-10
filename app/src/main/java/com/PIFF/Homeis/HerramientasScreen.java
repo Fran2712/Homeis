@@ -5,6 +5,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.VoiceInteractor;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -63,6 +64,20 @@ public class HerramientasScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HerramientasScreen.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.chat_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HerramientasScreen.this, ChatroomScreen.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.notifi_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HerramientasScreen.this, RequestsScreen.class);
                 startActivity(intent);
             }
         });
