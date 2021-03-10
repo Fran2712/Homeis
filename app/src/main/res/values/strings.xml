@@ -1,9 +1,54 @@
 <resources>
     <string name="app_name">Homeis</string>
     <string name="register_msg">Registrate ahora y conecta con tu vecindario</string>
+    <string name="register">¿No tienes cuenta?</string>
+    <string name="register2">Registrate Ahora</string>
+
+    <string name="logon_msg">Inicia sesión ahora para conectar con tu vecindario</string>
+    <string name="login">Iniciar Sesión</string>
+
     <string name="pass">Contraseña</string>
     <string name="pass_conf">Confirmar Contraseña</string>
     <string name="terms">Aceptar términos de privacidad y recibir emails con novedades</string>
     <string name="reg">Registrarse</string>
     <string name="mail">E-Mail</string>
+
+    <string name="direccion1">Introduzca su Dirección...</string>
+    <string name="direc">Registrar Direción</string>
+    <string name="address1">Direccion 1</string>
+    <string name="address2">Direccion 2</string>
+    <string name="cp">Codigo Postal</string>
+    <string name="city">Ciudad</string>
+    <string name="country">Pais</string>
+
+    <string name="bienv">Hola,</string>
+    <string name="nombreEj">Sophie</string>
+    <string name="quenec">¿Qué necesitas?</string>
+
+    <string name="card1">Herramientas</string>
+    <string name="card2">Social</string>
+    <string name="card3">Preguntas</string>
+    <string name="card4">Servicios</string>
+
+    <string name="txnec">Necesita</string>
+    <string name="txop">Ofrece</string>
+    <string name="txdesc">Descripcion</string>
+    <string name="txfecha">Fecha</string>
+    <string name="titutlo_notificationes">Notificaciones</string>
+    <string name="numero_service_requests">0</string>
+    <string name="titulo_service_request">Service Request</string>
+    <string name="titulo_approveignore_requests">Approve or ignore requests</string>
+    <string name="screen_title_requests">Requests</string>
+    <string name="Service_requests_title">Services</string>
+    <string name="Tool_requests_title">Tools</string>
+    <string name="requesting_card_txt">Requesting</string>
+    <string name="comment_card_txt">Comment</string>
+    <string name="decline_btn">Decline</string>
+    <string name="Accept_btn">Accept</string>
+    <string name="chatroom_screen_title">Chatroom</string>
+    <string name="searchbar_hint">‎‎‎‏‏‎ ‎‏‏‎ ‎Search</string>
+
+
+    <string name="busca">Busca aqui</string>
+>>>>>>> 77a49781e731a9cf758daf19b4755f749ab992ed
 </resources>
