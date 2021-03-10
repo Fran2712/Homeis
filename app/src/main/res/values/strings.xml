@@ -46,12 +46,13 @@
     <string name="comment_card_txt">Comment</string>
     <string name="decline_btn">Decline</string>
     <string name="Accept_btn">Accept</string>
-<<<<<<< HEAD
     <string name="chatroom_screen_title">Chatroom</string>
     //EL STRING 'searchbar_hint' USA SYMBOLOS ESPECIALES VACIOS. !!!ES POSIBLE QUE DE ERROR!!!
     <string name="searchbar_hint">‎‎‎‏‏‎ ‎‏‏‎ ‎Search</string>
-=======
 
     <string name="busca">Busca aqui</string>
->>>>>>> 77a49781e731a9cf758daf19b4755f749ab992ed
+    <string name="screen_title_create">Create post</string>
+    <string name="select_type">Select post type</string>
+    <string name="btn_create_post">Create</string>
+    >>>>>>> 77a49781e731a9cf758daf19b4755f749ab992ed
 </resources>
