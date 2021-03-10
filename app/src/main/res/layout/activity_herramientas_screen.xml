@@ -14,12 +14,13 @@
         android:layout_height="125dp"
         android:layout_marginBottom="660dp"
         android:background="@drawable/shapecard4"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"/>
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/TV_necesi2"
@@ -42,6 +43,7 @@
         android:id="@+id/searchView"
         android:layout_width="317dp"
         android:layout_height="43dp"
+        android:elevation="2dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="36dp"
         android:layout_marginTop="13dp"

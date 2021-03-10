@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         bajado = false;
 
         vista.setBackgroundResource(R.drawable.shapecard2);
-        Servicio c1 = new Servicio("Mandarina","Li,pio genial","Por si acaso necesitas una sierra radial poes eso, yo se la dejo");
+        Servicio c1 = new Servicio("Hugo Duro","Limpio genial","Men encanta limpiar y soy un maniaco de la limpieza, me encanta que todo este bien limpio y colocado donde debe, si quieres te puedo ayudar a limpiar ");
         Servicio c2 = new Servicio("Vegetta777","Electricista gratis xd","Hey muy buenas a todos guapisimos, aqui tengo una aspiradora sin cable por si alguien la quiere");
         Servicio c3 = new Servicio("Arnold","Cocinero","Termine de cavar un hueco en el campo y no voy a usar la pala, si alguien la quiere que me lo diga");
 

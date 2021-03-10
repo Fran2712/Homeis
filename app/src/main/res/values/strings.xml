@@ -48,4 +48,6 @@
     <string name="Accept_btn">Accept</string>
 
     <string name="busca">Busca aqui</string>
+    <string name="responder">Responder</string>
+    <string name="solicitar">Solicitar</string>
 </resources>

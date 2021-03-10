@@ -55,7 +55,6 @@ public class AdaptadorRecyclerSocial extends RecyclerView.Adapter<AdaptadorRecyc
                 if (hiddenView.getVisibility() == View.VISIBLE) {
                     hiddenView.setVisibility(View.GONE);
                     arrow.setImageResource(R.drawable.ic_baseline_expand_more_24);
-                    ((ViewGroup)vista).getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
                     vista.getLayoutParams().height= 560;
                     TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
                 }
@@ -63,7 +62,6 @@ public class AdaptadorRecyclerSocial extends RecyclerView.Adapter<AdaptadorRecyc
 
                     hiddenView.setVisibility(View.VISIBLE);
                     arrow.setImageResource(R.drawable.ic_baseline_expand_less_24);
-                    ((ViewGroup)vista).getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
                     vista.getLayoutParams().height=800;
 
                     TransitionManager.beginDelayedTransition(cardView,new AutoTransition());

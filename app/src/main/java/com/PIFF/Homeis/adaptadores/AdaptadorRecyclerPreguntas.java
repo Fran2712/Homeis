@@ -54,7 +54,6 @@ public class AdaptadorRecyclerPreguntas extends RecyclerView.Adapter<AdaptadorRe
                 if (hiddenView.getVisibility() == View.VISIBLE) {
                     hiddenView.setVisibility(View.GONE);
                     arrow.setImageResource(R.drawable.ic_baseline_expand_more_24);
-                    ((ViewGroup)vista).getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
                     vista.getLayoutParams().height= 360;
                     TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
                 }
@@ -62,7 +61,6 @@ public class AdaptadorRecyclerPreguntas extends RecyclerView.Adapter<AdaptadorRe
 
                     hiddenView.setVisibility(View.VISIBLE);
                     arrow.setImageResource(R.drawable.ic_baseline_expand_less_24);
-                    ((ViewGroup)vista).getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
                     vista.getLayoutParams().height=600;
                     TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
                 }
