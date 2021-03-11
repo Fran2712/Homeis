@@ -26,6 +26,7 @@ public class RegisterScreen extends AppCompatActivity {
     private Button btn_register;
     private TextInputLayout ed_email;
     private TextInputLayout ed_pass;
+    private TextInputLayout ed_username;
     private TextInputLayout ed_conf_pass;
     private MaterialCheckBox cb_terms;
 
@@ -35,6 +36,7 @@ public class RegisterScreen extends AppCompatActivity {
         setContentView(R.layout.activity_register_screen);
         ed_email =(TextInputLayout) findViewById(R.id.ED_email);
         ed_pass = (TextInputLayout)findViewById(R.id.ED_pass);
+        ed_username = (TextInputLayout)findViewById(R.id.ED_username);
         ed_conf_pass = (TextInputLayout)findViewById(R.id.ED_conf_pass);
         cb_terms = findViewById(R.id.CB_terms);
         btn_register = findViewById(R.id.BTN_regster);
@@ -48,7 +50,7 @@ public class RegisterScreen extends AppCompatActivity {
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Usuario user = new Usuario(ed_email.getEditText().getText().toString(),ed_pass.getEditText().getText().toString());
+                Usuario user = new Usuario(ed_email.getEditText().getText().toString(),ed_pass.getEditText().getText().toString(), ed_username.getEditText().getText().toString());
                 List<Usuario> usuariosBBDD= AccesoFirebase.devolverUsuarios();
                 boolean usuario_existente = AccesoFirebase.comprobarUsuario(ed_email.getEditText().getText().toString());
                 if (usuario_existente || usuariosBBDD.isEmpty()){
