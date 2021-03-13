@@ -54,4 +54,6 @@
     <string name="responder">Responder</string>
     <string name="solicitar">Solicitar</string>
 
+    <string name="escriamen">Escriba un mensaje...</string>
+    <string name="msg_tu">Tu:</string>
 </resources>

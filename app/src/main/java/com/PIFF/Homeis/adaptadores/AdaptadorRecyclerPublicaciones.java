@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -45,6 +46,14 @@ public class AdaptadorRecyclerPublicaciones extends RecyclerView.Adapter<Adaptad
         final LinearLayout hiddenView = vista.findViewById(R.id.hidden_view);
         final CardView cardView = vista.findViewById(R.id.base_cardview);
         final ImageButton arrow= vista.findViewById(R.id.arrow_button);
+
+        final Button solic= vista.findViewById(R.id.BTN_request);
+        solic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         ContenedorDeVistas contenedor = new ContenedorDeVistas(vista);
         Log.d("Contenedor","Creando contenedor de vistas");
 

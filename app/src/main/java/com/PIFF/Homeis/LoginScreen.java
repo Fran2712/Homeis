@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.PIFF.Homeis.cifrado.ResumenHash;
+import com.PIFF.Homeis.entidad.UserDetails;
 import com.PIFF.Homeis.entidad.Usuario;
 import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.google.android.material.textfield.TextInputLayout;
@@ -40,6 +41,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Usuario user = new Usuario(ed_email.getEditText().getText().toString(),ed_pass.getEditText().getText().toString());
+
                 List<Usuario> usuariosBBDD= AccesoFirebase.devolverUsuarios();
                 String pass_cifrada = ResumenHash.cifrarPassword(ed_pass.getEditText().getText().toString());
                 boolean usuario_existente = AccesoFirebase.comprobarLogin(ed_email.getEditText().getText().toString(),pass_cifrada);

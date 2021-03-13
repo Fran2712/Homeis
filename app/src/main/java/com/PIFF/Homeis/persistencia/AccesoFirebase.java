@@ -5,6 +5,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import com.PIFF.Homeis.entidad.Direccion;
+import com.PIFF.Homeis.entidad.UserDetails;
 import com.PIFF.Homeis.entidad.Usuario;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -64,6 +65,7 @@ public class AccesoFirebase {
     public static boolean comprobarLogin(String user_email, String user_pass) {
         for (Usuario u: usuariosBBDD) {
             if (u.getEmail().equals(user_email) && u.getPassword().equals(user_pass)){
+                UserDetails.username = u.getUsername();
                 return true;
             }
         }
