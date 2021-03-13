@@ -56,4 +56,7 @@
 
     <string name="escriamen">Escriba un mensaje...</string>
     <string name="msg_tu">Tu:</string>
+    <string name="screen_title_create">Create post</string>
+    <string name="select_type">Select post type</string>
+    <string name="btn_create_post">Create</string>
 </resources>
