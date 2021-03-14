@@ -7,7 +7,6 @@ public class Usuario implements Serializable {
     private String username;
     private String email;
     private String password;
-    private String username;
     private Direccion direccion;
 
 
@@ -22,14 +21,6 @@ public class Usuario implements Serializable {
         this.email = email;
         this.password = password;
         this.username =username;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getEmail() {

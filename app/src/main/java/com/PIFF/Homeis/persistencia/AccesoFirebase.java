@@ -92,9 +92,9 @@ public class AccesoFirebase {
     }
 
     public static boolean comprobarLogin(String user_email, String user_pass) {
-        for (Usuario u: usuariosBBDD) {
-            if (u.getEmail().equals(user_email) && u.getPassword().equals(user_pass)){
-                UserDetails.username = u.getUsername();
+        for (Usuario us: usuariosBBDD) {
+            if (us.getEmail().equals(user_email) && us.getPassword().equals(user_pass)){
+                UserDetails.username = us.getUsername();
                 return true;
             }
         }
