@@ -47,7 +47,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/overlock_bold"
-        android:text="Nombre Usuario"
+        android:text="@string/nombreUsuario"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/overlock"
-        android:text="Ubicación"
+        android:text="@string/ubicacionPerfil"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.535"
@@ -188,6 +188,8 @@
         android:layout_width="39dp"
         android:layout_height="41dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/shapeshadoww"
+        android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toStartOf="parent"
@@ -195,9 +197,10 @@
         app:srcCompat="@drawable/settingsicon" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/overlock"
         android:text="Settings"
         android:textSize="10sp"
@@ -206,5 +209,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/settings_iv" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_recentposts"
+        android:layout_width="409dp"
+        android:layout_height="335dp"
+        app:layout_constraintTop_toBottomOf="@id/guidelinerv"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="334dp" />
+
+    <TextView
+        android:id="@+id/tv_recentpost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/overlock_bold"
+        android:text="Actividad Reciente"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ubicacion" />
+
+    <TextView
+        android:id="@+id/tv_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="88dp"
+        android:fontFamily="@font/overlock_bold"
+        android:text="Mapa"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ubicacion" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinerv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="320dp"
+        android:orientation="horizontal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
