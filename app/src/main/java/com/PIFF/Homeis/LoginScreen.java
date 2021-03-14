@@ -12,11 +12,14 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.PIFF.Homeis.cifrado.ResumenHash;
+import com.PIFF.Homeis.entidad.Pregunta;
+import com.PIFF.Homeis.entidad.PublicacionSocial;
 import com.PIFF.Homeis.entidad.UserDetails;
 import com.PIFF.Homeis.entidad.Usuario;
 import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -46,6 +49,13 @@ public class LoginScreen extends AppCompatActivity {
                 String pass_cifrada = ResumenHash.cifrarPassword(ed_pass.getEditText().getText().toString());
                 boolean usuario_existente = AccesoFirebase.comprobarLogin(ed_email.getEditText().getText().toString(),pass_cifrada);
                 if(usuario_existente){
+
+
+                    AccesoFirebase.devolverPostSocial();
+                    AccesoFirebase.devolverPostPregunta();
+                    AccesoFirebase.devolverPostServicio("Herramienta");
+                    AccesoFirebase.devolverPostServicio("Servicio");
+
                     Intent intent = new Intent(LoginScreen.this, MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);

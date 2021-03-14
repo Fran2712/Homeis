@@ -63,6 +63,7 @@
     <string name="desc_post">Escribe una descripción</string>
 
     <string name="post_tipo">Tipo de publicación</string>
+    <string name="crear_post">Crear Publicación</string>
 
 
 </resources>

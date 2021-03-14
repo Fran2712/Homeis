@@ -1,10 +1,12 @@
 package com.PIFF.Homeis.persistencia;
 
+import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.PIFF.Homeis.entidad.Direccion;
+import com.PIFF.Homeis.HerramientasScreen;
+import com.PIFF.Homeis.SocialScreen;
 import com.PIFF.Homeis.entidad.Pregunta;
 import com.PIFF.Homeis.entidad.PublicacionSocial;
 import com.PIFF.Homeis.entidad.Servicio;
@@ -14,7 +16,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -100,6 +101,7 @@ public class AccesoFirebase {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (tipo.equals("Herramienta")) {
                     postServHerr.clear();
+
                 }else {
                     postServ.clear();
                 }
@@ -135,7 +137,7 @@ public class AccesoFirebase {
     public static void crearPostSocial(PublicacionSocial s) {
         double d = Math.random();
         ref = bd.getReference("Publicaciones-Social");
-        ref.child(s.getAutor() + "-" + ref.child(s.getAutor() + "-" + String.valueOf(d).replace(".","Z"))).setValue(s);
+        ref.child(s.getAutor() + "-" + String.valueOf(d).replace(".","Z")).setValue(s);
     }
 
     public static ArrayList<PublicacionSocial> devolverPostSocial() {
@@ -164,7 +166,7 @@ public class AccesoFirebase {
     public static void crearPostPregunta(Pregunta s) {
         double d = Math.random();
         ref = bd.getReference("Publicaciones-Pregunta");
-        ref.child(s.getAutor() + "-" + ref.child(s.getAutor() + "-" + String.valueOf(d).replace(".","Z"))).setValue(s);
+        ref.child(s.getAutor() + "-" + String.valueOf(d).replace(".","Z")).setValue(s);
     }
     public static ArrayList<Pregunta> devolverPostPregunta() {
         bd = FirebaseDatabase.getInstance();
@@ -195,4 +197,5 @@ public class AccesoFirebase {
         ref.child(UserDetails.username + "_" + usuario).push();
 
     }
+
 }

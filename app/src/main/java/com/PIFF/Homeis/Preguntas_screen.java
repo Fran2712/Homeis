@@ -37,7 +37,6 @@ public class Preguntas_screen extends AppCompatActivity {
 
         ArrayList<Pregunta> liata = AccesoFirebase.devolverPostPregunta();
 
-
         gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         adapt = new AdaptadorRecyclerPreguntas(liata,Preguntas_screen.this);
         rec.setAdapter(adapt);

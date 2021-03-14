@@ -9,8 +9,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerSocial;
 import com.PIFF.Homeis.entidad.PublicacionSocial;
+import com.PIFF.Homeis.entidad.Servicio;
 import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.shape.CornerFamily;
@@ -19,7 +21,7 @@ import com.google.android.material.shape.MaterialShapeDrawable;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class SocialScreen extends AppCompatActivity {
+public class SocialScreen extends AppCompatActivity{
 
     private RecyclerView rec;
     private RecyclerView.LayoutManager gestor2;
@@ -33,7 +35,10 @@ public class SocialScreen extends AppCompatActivity {
         setContentView(R.layout.activity_social_screen);
         rec = findViewById(R.id.RC_servivios);
         coo = findViewById(R.id.coordinator);
-        liata = AccesoFirebase.devolverPostSocial();
+
+       ArrayList<PublicacionSocial> liata = AccesoFirebase.devolverPostSocial();
+
+
         gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         adapt = new AdaptadorRecyclerSocial(liata, SocialScreen.this);
         rec.setAdapter(adapt);
@@ -85,4 +90,5 @@ public class SocialScreen extends AppCompatActivity {
 
 
     }
+
 }

@@ -44,7 +44,6 @@ public class ServiciosScreen extends AppCompatActivity {
         //Borde redondo bottom app bar
         float radius = 80;
         BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
-
         MaterialShapeDrawable bottomBarBackground = (MaterialShapeDrawable) bottomAppBar.getBackground();
         bottomBarBackground.setShapeAppearanceModel(
                 bottomBarBackground.getShapeAppearanceModel()
@@ -83,4 +82,5 @@ public class ServiciosScreen extends AppCompatActivity {
             }
         });
     }
+
 }

@@ -53,8 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         vista.setBackgroundResource(R.drawable.shapecard2);
 
-        liata = AccesoFirebase.devolverPostServicio("Servicio");
-        liata = AccesoFirebase.devolverPostServicio("Servicio");
+        liata = AccesoFirebase.devolverPostServicio("Herramienta");
 
         gestor = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -98,12 +97,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!bajado){
-                    vista.animate().translationYBy(+1200).start();
+                    vista.animate().translationYBy(+1070).start();
                     tit.setVisibility(View.INVISIBLE);
                     rec.setLayoutManager(gestor2);
                     bajado = true;
                 }else{
-                    vista.animate().translationYBy(-1200).start();
+                    vista.animate().translationYBy(-1070).start();
                     tit.setVisibility(View.VISIBLE);
                     rec.animate().alphaBy(1).start();
                     rec.setLayoutManager(gestor);

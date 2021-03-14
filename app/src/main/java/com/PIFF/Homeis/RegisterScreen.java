@@ -12,6 +12,7 @@ import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.PIFF.Homeis.cifrado.ResumenHash;
+import com.PIFF.Homeis.entidad.UserDetails;
 import com.PIFF.Homeis.entidad.Usuario;
 import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.google.android.material.checkbox.MaterialCheckBox;
@@ -59,6 +60,7 @@ public class RegisterScreen extends AppCompatActivity {
                     String pass_cifrada= ResumenHash.cifrarPassword(user.getPassword());
                     user.setPassword(pass_cifrada);
                     AccesoFirebase.altaUsuario(user);
+                    UserDetails.username = user.getUsername();
                     Intent intent = new Intent(RegisterScreen.this, DireccionScreen.class);
                     intent.putExtra("usuario",user);
                     startActivity(intent);

@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.PIFF.Homeis.entidad.UserDetails;
+
 public class DireccionScreen extends AppCompatActivity {
     private Button btn_regster;
     private Spinner spn_paises;
@@ -56,6 +58,7 @@ public class DireccionScreen extends AppCompatActivity {
         btn_regster.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(DireccionScreen.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
