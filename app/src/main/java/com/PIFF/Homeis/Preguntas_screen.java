@@ -1,25 +1,24 @@
 package com.PIFF.Homeis;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPreguntas;
-import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
 import com.PIFF.Homeis.entidad.Pregunta;
-import com.PIFF.Homeis.entidad.Publicacion;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.MaterialShapeDrawable;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Preguntas_screen extends AppCompatActivity {
 
@@ -76,12 +75,31 @@ public class Preguntas_screen extends AppCompatActivity {
             }
         });
 
+        //Listeners Bottom app Bar
+        findViewById(R.id.home_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Preguntas_screen.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.chat_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Preguntas_screen.this, ChatroomScreen.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.notifi_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Preguntas_screen.this, NotificationsScreen.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
-
-
-
-
-
 
 }

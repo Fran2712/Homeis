@@ -5,9 +5,10 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
-import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerServicios;
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerSocial;
 import com.PIFF.Homeis.entidad.PublicacionSocial;
 import com.google.android.material.bottomappbar.BottomAppBar;
@@ -57,7 +58,28 @@ public class SocialScreen extends AppCompatActivity {
                         .setTopLeftCorner(CornerFamily.ROUNDED,radius)
                         .build());
 
-
+        //Listeners Bottom app Bar
+        findViewById(R.id.home_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SocialScreen.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.chat_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SocialScreen.this, ChatroomScreen.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.notifi_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SocialScreen.this, NotificationsScreen.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
