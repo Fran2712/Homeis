@@ -26,10 +26,10 @@
     <string name="nombreEj">Sophie</string>
     <string name="quenec">¿Qué necesitas?</string>
 
-    <string name="card1">Herramientas</string>
-    <string name="card2">Social</string>
-    <string name="card3">Preguntas</string>
-    <string name="card4">Servicios</string>
+    <string name="herr">Herramientas</string>
+    <string name="soc">Social</string>
+    <string name="preg">Preguntas</string>
+    <string name="serv">Servicios</string>
 
     <string name="txnec">Necesita</string>
     <string name="txop">Ofrece</string>
@@ -39,7 +39,7 @@
     <string name="numero_service_requests">0</string>
     <string name="pl_username">Nombre de Usuario</string>
 
-    <string name="titulo_service_request">Service Request</string>
+    <string name="titulo_service_request">Peticion de Servicios</string>
     <string name="titulo_approveignore_requests">Aprobar peticiones</string>
     <string name="screen_title_requests">Peticiones</string>
     <string name="Service_requests_title">Servicios</string>
@@ -56,7 +56,13 @@
 
     <string name="escriamen">Escriba un mensaje...</string>
     <string name="msg_tu">Tu:</string>
-    <string name="screen_title_create">Create post</string>
-    <string name="select_type">Select post type</string>
-    <string name="btn_create_post">Create</string>
+    <string name="screen_title_create">Crea una publicación</string>
+    <string name="select_type">Selecciona el tipo de publicación</string>
+    <string name="btn_create_post">Crear</string>
+    <string name="que_ofrece">¿Qué ofreces?</string>
+    <string name="desc_post">Escribe una descripción</string>
+
+    <string name="post_tipo">Tipo de publicación</string>
+
+
 </resources>

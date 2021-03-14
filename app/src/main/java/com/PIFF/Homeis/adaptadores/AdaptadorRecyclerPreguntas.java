@@ -2,12 +2,14 @@ package com.PIFF.Homeis.adaptadores;
 
 import android.animation.LayoutTransition;
 import android.content.Context;
+import android.content.Intent;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageButton;
@@ -19,9 +21,12 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.PIFF.Homeis.ChatScreen;
 import com.PIFF.Homeis.Preguntas_screen;
 import com.PIFF.Homeis.R;
 import com.PIFF.Homeis.entidad.Pregunta;
+import com.PIFF.Homeis.entidad.UserDetails;
+import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
@@ -47,14 +52,27 @@ public class AdaptadorRecyclerPreguntas extends RecyclerView.Adapter<AdaptadorRe
         final CardView cardView = vista.findViewById(R.id.base_cardview);
         final ImageButton arrow= vista.findViewById(R.id.arrow_button);
         ContenedorDeVistas contenedor = new ContenedorDeVistas(vista);
-        Log.d("Contenedor","Creando contenedor de vistas");
+
+        Button btn_solici= vista.findViewById(R.id.BTN_request);
+        btn_solici.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!tv_autor.getText().toString().equals(UserDetails.username)) {
+                    AccesoFirebase.crearChat(tv_autor.getText().toString());
+                    UserDetails.chatWith = tv_autor.getText().toString();
+                    Intent intent = new Intent(context, ChatScreen.class);
+                    context.startActivity(intent);
+                }
+            }
+        });
+
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (hiddenView.getVisibility() == View.VISIBLE) {
                     hiddenView.setVisibility(View.GONE);
                     arrow.setImageResource(R.drawable.ic_baseline_expand_more_24);
-                    vista.getLayoutParams().height= 360;
+                    vista.getLayoutParams().height= 400;
                     TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
                 }
                 else {

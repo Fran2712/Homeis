@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ChatScreen" android:theme="@style/AppThemeNoBar"></activity>
+        <activity android:name=".CreatePost" android:theme="@style/AppThemeNoBar"></activity>
         <activity
             android:name=".HerramientasScreen"
             android:theme="@style/AppThemeNoBar" />

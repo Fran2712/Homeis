@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPreguntas;
 import com.PIFF.Homeis.entidad.Pregunta;
+import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.MaterialShapeDrawable;
@@ -34,15 +35,8 @@ public class Preguntas_screen extends AppCompatActivity {
         rec = findViewById(R.id.RC_preguntas);
         searchView = findViewById(R.id.searchView);
 
-        Pregunta p1 = new Pregunta("Adefesio ","Alguien sabe como empalmar 2 cables?");
-        Pregunta p2 = new Pregunta("Marina ","Algun metodo to guapo pa levantar el parqué");
-        Pregunta p3 = new Pregunta("Pablo ","A que dia y hora pasa el recogebasura??");
+        ArrayList<Pregunta> liata = AccesoFirebase.devolverPostPregunta();
 
-        final ArrayList<Pregunta> liata = new ArrayList<>();
-
-        liata.add(p1);
-        liata.add(p2);
-        liata.add(p3);
 
         gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         adapt = new AdaptadorRecyclerPreguntas(liata,Preguntas_screen.this);
@@ -94,6 +88,13 @@ public class Preguntas_screen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Preguntas_screen.this, NotificationsScreen.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Preguntas_screen.this, CreatePost.class);
                 startActivity(intent);
             }
         });

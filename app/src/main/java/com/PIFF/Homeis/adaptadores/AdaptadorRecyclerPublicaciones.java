@@ -2,6 +2,7 @@ package com.PIFF.Homeis.adaptadores;
 
 import android.animation.LayoutTransition;
 import android.content.Context;
+import android.content.Intent;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.util.Log;
@@ -18,8 +19,11 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.PIFF.Homeis.ChatScreen;
 import com.PIFF.Homeis.R;
 import com.PIFF.Homeis.entidad.Servicio;
+import com.PIFF.Homeis.entidad.UserDetails;
+import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
@@ -47,11 +51,16 @@ public class AdaptadorRecyclerPublicaciones extends RecyclerView.Adapter<Adaptad
         final CardView cardView = vista.findViewById(R.id.base_cardview);
         final ImageButton arrow= vista.findViewById(R.id.arrow_button);
 
-        final Button solic= vista.findViewById(R.id.BTN_request);
-        solic.setOnClickListener(new View.OnClickListener() {
+        Button btn_solici= vista.findViewById(R.id.BTN_request);
+        btn_solici.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (!tv_autor.getText().toString().equals(UserDetails.username)) {
+                    AccesoFirebase.crearChat(tv_autor.getText().toString());
+                    UserDetails.chatWith = tv_autor.getText().toString();
+                    Intent intent = new Intent(context, ChatScreen.class);
+                    context.startActivity(intent);
+                }
             }
         });
         ContenedorDeVistas contenedor = new ContenedorDeVistas(vista);
@@ -63,7 +72,7 @@ public class AdaptadorRecyclerPublicaciones extends RecyclerView.Adapter<Adaptad
                 if (hiddenView.getVisibility() == View.VISIBLE) {
                     hiddenView.setVisibility(View.GONE);
                     arrow.setImageResource(R.drawable.ic_baseline_expand_more_24);
-                    vista.getLayoutParams().height= 560;
+                    vista.getLayoutParams().height= 590;
                     TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
                 }
                 else {

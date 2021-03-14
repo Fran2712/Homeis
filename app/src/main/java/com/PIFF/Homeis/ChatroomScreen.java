@@ -123,6 +123,13 @@ public class ChatroomScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChatroomScreen.this, CreatePost.class);
+                startActivity(intent);
+            }
+        });
 
     }
     public void doOnSuccess(String s){
