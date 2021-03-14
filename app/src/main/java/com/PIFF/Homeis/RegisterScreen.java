@@ -16,18 +16,20 @@ import com.PIFF.Homeis.entidad.Usuario;
 import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.google.android.material.checkbox.MaterialCheckBox;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegisterScreen extends AppCompatActivity {
+public class RegisterScreen extends AppCompatActivity implements AccesoFirebase.InterfazFirebase {
 
     private Button btn_register;
     private TextInputLayout ed_email;
     private TextInputLayout ed_pass;
     private TextInputLayout ed_conf_pass;
     private MaterialCheckBox cb_terms;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,31 +38,18 @@ public class RegisterScreen extends AppCompatActivity {
         ed_email =(TextInputLayout) findViewById(R.id.ED_email);
         ed_pass = (TextInputLayout)findViewById(R.id.ED_pass);
         ed_conf_pass = (TextInputLayout)findViewById(R.id.ED_conf_pass);
+        firebaseAuth = FirebaseAuth.getInstance();
         cb_terms = findViewById(R.id.CB_terms);
         btn_register = findViewById(R.id.BTN_regster);
         ed_email.getEditText().addTextChangedListener(validarCampos);
         ed_pass.getEditText().addTextChangedListener(validarCampos);
         ed_conf_pass.getEditText().addTextChangedListener(validarCampos);
         cb_terms.setOnCheckedChangeListener(validarCheckBox);
-
         btn_register.setEnabled(false);
-
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Usuario user = new Usuario(ed_email.getEditText().getText().toString(),ed_pass.getEditText().getText().toString());
-                List<Usuario> usuariosBBDD= AccesoFirebase.devolverUsuarios();
-                boolean usuario_existente = AccesoFirebase.comprobarUsuario(ed_email.getEditText().getText().toString());
-                if (usuario_existente || usuariosBBDD.isEmpty()){
-                    Toast.makeText(RegisterScreen.this,"El usuario ya existe",Toast.LENGTH_LONG).show();
-                }else{
-                    String pass_cifrada= ResumenHash.cifrarPassword(user.getPassword());
-                    user.setPassword(pass_cifrada);
-                    AccesoFirebase.altaUsuario(user);
-                    Intent intent = new Intent(RegisterScreen.this, DireccionScreen.class);
-                    intent.putExtra("usuario",user);
-                    startActivity(intent);
-                }
+                AccesoFirebase.devolverUsuarios(null,RegisterScreen.this);
             }
         });
     }
@@ -123,4 +112,21 @@ public class RegisterScreen extends AppCompatActivity {
             btn_register.setEnabled(comprobarCampos(email,pass,conf_pass,terms));
         }
     };
+
+    @Override
+    public void devolverUsuarios(List<Usuario> usuariosBBDD) {
+        Usuario user = new Usuario(ed_email.getEditText().getText().toString(),ed_pass.getEditText().getText().toString());
+        boolean usuario_existente = AccesoFirebase.comprobarUsuario(ed_email.getEditText().getText().toString());
+        if (usuario_existente){
+            Toast.makeText(RegisterScreen.this,"El usuario ya existe",Toast.LENGTH_LONG).show();
+        }else{
+            AccesoFirebase.registrarUsuario(firebaseAuth,user);
+            String pass_cifrada= ResumenHash.cifrarPassword(user.getPassword());
+            user.setPassword(pass_cifrada);
+            AccesoFirebase.altaUsuario(user);
+            Intent intent = new Intent(RegisterScreen.this, DireccionScreen.class);
+            intent.putExtra("usuario",user);
+            startActivity(intent);
+        }
+    }
 }

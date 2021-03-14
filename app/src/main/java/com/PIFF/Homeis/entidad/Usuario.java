@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class Usuario implements Serializable {
     private String email;
     private String password;
+    private String username;
     private Direccion direccion;
 
 
@@ -38,5 +39,13 @@ public class Usuario implements Serializable {
 
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
