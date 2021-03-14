@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="150dp"
     android:animateLayoutChanges="true">
 
     <androidx.cardview.widget.CardView
@@ -21,15 +21,12 @@
         app:layout_constraintVertical_bias="0.021">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.511"
             tools:layout_editor_absoluteX="-55dp">
-
-
-            <!--This is ImageButton for the expansion icon.-->
 
             <ImageButton
                 android:id="@+id/like_button"
@@ -55,12 +52,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/fixed_layout"
-                android:layout_width="358dp"
-                android:layout_height="86dp"
+                android:layout_width="354dp"
+                android:layout_height="108dp"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0">
@@ -117,6 +113,22 @@
                     android:elevation="8dp"
                     app:layout_constraintStart_toStartOf="@+id/guideline8"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/TV_fech"
+                    android:layout_width="223dp"
+                    android:layout_height="18dp"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/overlock"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorAccent4"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toBottomOf="@+id/TV_desc"
+                    app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout

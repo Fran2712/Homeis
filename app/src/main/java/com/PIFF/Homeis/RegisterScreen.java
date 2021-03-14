@@ -12,6 +12,7 @@ import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.PIFF.Homeis.cifrado.ResumenHash;
+import com.PIFF.Homeis.entidad.UserDetails;
 import com.PIFF.Homeis.entidad.Usuario;
 import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.google.android.material.checkbox.MaterialCheckBox;
@@ -27,6 +28,7 @@ public class RegisterScreen extends AppCompatActivity implements AccesoFirebase.
     private Button btn_register;
     private TextInputLayout ed_email;
     private TextInputLayout ed_pass;
+    private TextInputLayout ed_username;
     private TextInputLayout ed_conf_pass;
     private MaterialCheckBox cb_terms;
     private FirebaseAuth firebaseAuth;
@@ -37,6 +39,7 @@ public class RegisterScreen extends AppCompatActivity implements AccesoFirebase.
         setContentView(R.layout.activity_register_screen);
         ed_email =(TextInputLayout) findViewById(R.id.ED_email);
         ed_pass = (TextInputLayout)findViewById(R.id.ED_pass);
+        ed_username = (TextInputLayout)findViewById(R.id.ED_username);
         ed_conf_pass = (TextInputLayout)findViewById(R.id.ED_conf_pass);
         firebaseAuth = FirebaseAuth.getInstance();
         cb_terms = findViewById(R.id.CB_terms);

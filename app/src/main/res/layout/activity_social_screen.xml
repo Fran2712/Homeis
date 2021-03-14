@@ -28,7 +28,7 @@
         android:layout_height="39dp"
         android:elevation="4dp"
         android:fontFamily="@font/overlock_bold"
-        android:text="@string/card2"
+        android:text="@string/soc"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="30dp"

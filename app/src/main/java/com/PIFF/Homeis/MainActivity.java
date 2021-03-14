@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
 import com.PIFF.Homeis.entidad.Servicio;
+import com.PIFF.Homeis.persistencia.AccesoFirebase;
 
 import java.util.ArrayList;
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager gestor;
     private RecyclerView.LayoutManager gestor2;
     private AdaptadorRecyclerPublicaciones adapt;
+    private ArrayList<Servicio> liata;
 
 
     @Override
@@ -50,15 +52,8 @@ public class MainActivity extends AppCompatActivity {
         bajado = false;
 
         vista.setBackgroundResource(R.drawable.shapecard2);
-        Servicio c1 = new Servicio("Hugo Duro","Limpio genial","Men encanta limpiar y soy un maniaco de la limpieza, me encanta que todo este bien limpio y colocado donde debe, si quieres te puedo ayudar a limpiar ");
-        Servicio c2 = new Servicio("Vegetta777","Electricista gratis xd","Hey muy buenas a todos guapisimos, aqui tengo una aspiradora sin cable por si alguien la quiere");
-        Servicio c3 = new Servicio("Arnold","Cocinero","Termine de cavar un hueco en el campo y no voy a usar la pala, si alguien la quiere que me lo diga");
 
-        ArrayList<Servicio> liata = new ArrayList<>();
-
-        liata.add(c1);
-        liata.add(c2);
-        liata.add(c3);
+        liata = AccesoFirebase.devolverPostServicio("Herramienta");
 
         gestor = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -102,12 +97,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!bajado){
-                    vista.animate().translationYBy(+1200).start();
+                    vista.animate().translationYBy(+1070).start();
                     tit.setVisibility(View.INVISIBLE);
                     rec.setLayoutManager(gestor2);
                     bajado = true;
                 }else{
-                    vista.animate().translationYBy(-1200).start();
+                    vista.animate().translationYBy(-1070).start();
                     tit.setVisibility(View.VISIBLE);
                     rec.animate().alphaBy(1).start();
                     rec.setLayoutManager(gestor);

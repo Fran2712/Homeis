@@ -46,8 +46,8 @@
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RC_conversations"
+    <ListView
+        android:id="@+id/LV_conversations"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:backgroundTint="#ECE9E9"
@@ -56,6 +56,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/noUsersText"
+        android:layout_width="97dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="50dp"
+        android:text="No users found!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:visibility="gone"/>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator"

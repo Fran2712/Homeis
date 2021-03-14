@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#dddddd"
+
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="381dp"
+        android:padding="2dp"
+        android:layout_height="542dp"
+        android:layout_marginTop="9dp"
+        android:layout_weight="20"
+        app:layout_constraintBottom_toTopOf="@+id/include"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vista_contact">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/message_area"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:gravity="bottom"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/vista_contact"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_nombre_usr"
+        android:layout_width="108dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginEnd="137dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/overlock"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/vista_contact"
+        app:layout_constraintEnd_toEndOf="@+id/vista_contact"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="@+id/vista_contact" />
+
+    <ImageView
+        android:id="@+id/foto_perfil"
+        android:layout_width="64dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="153dp"
+        android:layout_marginEnd="167dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vista_contact"
+        app:layout_constraintEnd_toEndOf="@+id/vista_contact"
+        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintStart_toStartOf="@+id/vista_contact"
+        app:layout_constraintTop_toTopOf="@+id/vista_contact"
+        app:layout_constraintVertical_bias="0.326"
+        app:srcCompat="@drawable/profilepic" />
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="38dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="42dp"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vista_contact"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vista_contact"
+        tools:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
