@@ -77,6 +77,11 @@
             android:name=".ProfileScreen"
             android:theme="@style/AppThemeNoBar"></activity>
         <activity
+            android:theme="@style/AppThemeNoBar"
+            android:name=".SettingsScreen">
+
+        </activity>
+        <activity
             android:name=".ChatroomScreen"
             android:theme="@style/AppThemeNoBar" />
         <activity

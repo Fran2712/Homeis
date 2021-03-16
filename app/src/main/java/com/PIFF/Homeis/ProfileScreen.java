@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -28,6 +29,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class ProfileScreen extends FragmentActivity implements OnMapReadyCallback {
     private LocationManager lc = null;
     private GoogleMap mMap;
+    private ImageView img_settings;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -36,21 +38,21 @@ public class ProfileScreen extends FragmentActivity implements OnMapReadyCallbac
         setContentView(R.layout.activity_profile);
         lc = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
         //Listeners Bottom app Bar
-        findViewById(R.id.home_menu_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.first_menu_item).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ProfileScreen.this, MainActivity.class);
                 startActivity(intent);
             }
         });
-        findViewById(R.id.chat_menu_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.second_menu_item).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ProfileScreen.this, ChatroomScreen.class);
                 startActivity(intent);
             }
         });
-        findViewById(R.id.notifi_menu_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.third_menu_item).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ProfileScreen.this, NotificationsScreen.class);
@@ -64,10 +66,18 @@ public class ProfileScreen extends FragmentActivity implements OnMapReadyCallbac
                 startActivity(intent);
             }
         });
-        findViewById(R.id.profile_menu_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fourth_menu_item).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ProfileScreen.this, ProfileScreen.class);
+                startActivity(intent);
+            }
+        });
+        img_settings = findViewById(R.id.settings_iv);
+        img_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileScreen.this, SettingsScreen.class);
                 startActivity(intent);
             }
         });
