@@ -53,5 +53,7 @@
 =======
 
     <string name="busca">Busca aqui</string>
->>>>>>> 77a49781e731a9cf758daf19b4755f749ab992ed
+    <string name="recent_posts_title">Recent posts</string>
+    <string name="profile_map_title">Map</string>
+    >>>>>>> 77a49781e731a9cf758daf19b4755f749ab992ed
 </resources>
