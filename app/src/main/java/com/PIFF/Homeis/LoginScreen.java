@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import me.relex.circleindicator.CircleIndicator;
 
 import com.PIFF.Homeis.cifrado.ResumenHash;
 import com.PIFF.Homeis.entidad.Pregunta;

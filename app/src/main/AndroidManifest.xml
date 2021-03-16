@@ -24,7 +24,7 @@
             android:name=".Preguntas_screen"
             android:theme="@style/AppThemeNoBar" />
         <activity
-            android:name=".ServiciosScreen"
+            android:name=".SplashScreen"
             android:theme="@style/AppThemeNoBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,17 +39,13 @@
             android:name=".MainActivity"
             android:theme="@style/AppThemeNoBar" />
         <activity
-            android:name=".LoginScreen"
+            android:name=".ServiciosScreen"
             android:theme="@style/AppThemeNoBar" />
         <activity
             android:name=".DireccionScreen"
             android:theme="@style/AppThemeNoBar" />
         <activity
-            android:name=".CreatePost"
-            android:theme="@style/AppThemeNoBar">
-        </activity>
-        <activity
-            android:name=".SplashScreen"
+            android:name=".LoginScreen"
             android:theme="@style/AppThemeNoBar">
         </activity>
         <activity
