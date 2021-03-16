@@ -34,12 +34,10 @@ import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.shape.MaterialShapeDrawable;
 
-public class ProfileScreen extends AppCompatActivity {
-    private TextView usuario;
-
 public class ProfileScreen extends FragmentActivity implements OnMapReadyCallback {
     private LocationManager lc = null;
     private GoogleMap mMap;
+    private TextView usuario;
     private ImageView img_settings;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -47,23 +45,29 @@ public class ProfileScreen extends FragmentActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        lc = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+
+        usuario =findViewById(R.id.nombreUSR);
+        BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
+
+        usuario.setText(UserDetails.username);
+        lc = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         //Listeners Bottom app Bar
-        findViewById(R.id.first_menu_item).setOnClickListener(new View.OnClickListener() {
+
+        findViewById(R.id.home_menu_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ProfileScreen.this, MainActivity.class);
                 startActivity(intent);
             }
         });
-        findViewById(R.id.second_menu_item).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.chat_menu_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ProfileScreen.this, ChatroomScreen.class);
                 startActivity(intent);
             }
         });
-        findViewById(R.id.third_menu_item).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.notifi_menu_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ProfileScreen.this, NotificationsScreen.class);
@@ -77,13 +81,7 @@ public class ProfileScreen extends FragmentActivity implements OnMapReadyCallbac
                 startActivity(intent);
             }
         });
-        findViewById(R.id.fourth_menu_item).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ProfileScreen.this, ProfileScreen.class);
-                startActivity(intent);
-            }
-        });
+
         img_settings = findViewById(R.id.settings_iv);
         img_settings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,13 +100,13 @@ public class ProfileScreen extends FragmentActivity implements OnMapReadyCallbac
     private void chequearPermisos() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             String[] permisos = {Manifest.permission.ACCESS_FINE_LOCATION};
-            requestPermissions(permisos,666);
+            requestPermissions(permisos, 666);
             return;
-        }
-        else{
+        } else {
             obtenerUbicacion();
         }
     }
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void obtenerUbicacion() {
         LocationListener oyente_localizaciones = new LocationListener() {
@@ -143,7 +141,3 @@ public class ProfileScreen extends FragmentActivity implements OnMapReadyCallbac
 
 
 
-    }
-
-
-}
