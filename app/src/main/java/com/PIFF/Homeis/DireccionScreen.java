@@ -30,6 +30,8 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.List;
 
+import com.PIFF.Homeis.entidad.UserDetails;
+
 public class DireccionScreen extends AppCompatActivity {
     private Button btn_regster;
     private Spinner spn_paises;

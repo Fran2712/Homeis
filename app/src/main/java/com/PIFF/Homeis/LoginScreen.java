@@ -14,6 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.PIFF.Homeis.cifrado.ResumenHash;
+import com.PIFF.Homeis.entidad.Pregunta;
+import com.PIFF.Homeis.entidad.PublicacionSocial;
+import com.PIFF.Homeis.entidad.UserDetails;
 import com.PIFF.Homeis.entidad.Usuario;
 import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +25,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -46,6 +50,11 @@ public class LoginScreen extends AppCompatActivity implements AccesoFirebase.Int
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                AccesoFirebase.devolverPostSocial();
+                AccesoFirebase.devolverPostPregunta();
+                AccesoFirebase.devolverPostServicio("Herramienta");
+                AccesoFirebase.devolverPostServicio("Servicio");
+
                 AccesoFirebase.devolverUsuarios(LoginScreen.this,null);
             }
         });

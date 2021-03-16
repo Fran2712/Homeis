@@ -7,46 +7,34 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.transition.AutoTransition;
-import android.transition.TransitionManager;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
-import com.PIFF.Homeis.entidad.Publicacion;
+import com.PIFF.Homeis.entidad.Servicio;
+import com.PIFF.Homeis.persistencia.AccesoFirebase;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    private View vista;
-    private View card1;
-    private View card2;
-    private View card3;
-    private View card4;
+    private CardView vista;
+    private CardView card1;
+    private CardView card2;
+    private CardView card3;
+    private CardView card4;
+
+
     private RecyclerView rec;
     private ImageView ocul;
     private Boolean bajado;
     private TextView tit;
-    private TextView txt_card_1;
-    private TextView txt_card_2;
-    private TextView txt_card_3;
-    private TextView txt_card_4;
     private RecyclerView.LayoutManager gestor;
     private RecyclerView.LayoutManager gestor2;
     private AdaptadorRecyclerPublicaciones adapt;
-    private  ImageView img_serv;
-    private  ImageView img_preg;
-    private  ImageView img_herr;
-    private  ImageView img_social;
+    private ArrayList<Servicio> liata;
 
-    private ImageButton arrow;
-    private LinearLayout hiddenView;
-    private CardView cardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,31 +48,19 @@ public class MainActivity extends AppCompatActivity {
         card2 = findViewById(R.id.card_2);
         card3 = findViewById(R.id.card_3);
         card4 = findViewById(R.id.card_4);
-        tit = findViewById(R.id.TV_necesi);
-        txt_card_1 = findViewById(R.id.TV_card_1);
-        txt_card_2 = findViewById(R.id.TV_card_2);
-        txt_card_3 = findViewById(R.id.TV_card_3);
-        txt_card_4 = findViewById(R.id.TV_card_4);
-
-        img_serv = findViewById(R.id.IMG_serv);
-        img_preg = findViewById(R.id.IMG_preg);
-        img_herr = findViewById(R.id.IMG_herr);
-        img_social = findViewById(R.id.IMG_social);
 
         bajado = false;
 
-        Publicacion c1 = new Publicacion("Adolfo","Necesito a una motosierra","hoy he estado en Rusia y necesito que alguien me deje una sierra radial",new Date());
-        Publicacion c2 = new Publicacion("Benito ","Necesito un Manitas","Pues eso mnecesito que alguien me ayude a montar la que me comprao del ikea", new Date());
+        vista.setBackgroundResource(R.drawable.shapecard2);
 
-        ArrayList<Publicacion> liata = new ArrayList<>();
+        liata = AccesoFirebase.devolverPostServicio("Herramienta");
 
-        liata.add(c1);
-        liata.add(c2);
         gestor = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         adapt = new AdaptadorRecyclerPublicaciones(liata,MainActivity.this);
         rec.setAdapter(adapt);
         rec.setLayoutManager(gestor);
+
         //servicios
         card3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,40 +97,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!bajado){
-                    vista.animate().translationYBy(+1200).start();
-                    ocul.animate().translationYBy(+1200).start();
-                    card1.animate().translationYBy(+1200).start();
-                    card2.animate().translationYBy(+1200).start();
-                    card3.animate().translationYBy(+1200).start();
-                    card4.animate().translationYBy(+1200).start();
-                    txt_card_1.animate().translationYBy(+1200).start();
-                    txt_card_2.animate().translationYBy(+1200).start();
-                    txt_card_3.animate().translationYBy(+1200).start();
-                    txt_card_4.animate().translationYBy(+1200).start();
-                    tit.animate().translationYBy(+1200).start();
-                    img_serv.animate().translationYBy(+1200).start();
-                    img_preg.animate().translationYBy(+1200).start();
-                    img_herr.animate().translationYBy(+1200).start();
-                    img_social.animate().translationYBy(+1200).start();
+                    vista.animate().translationYBy(+1070).start();
                     tit.setVisibility(View.INVISIBLE);
                     rec.setLayoutManager(gestor2);
                     bajado = true;
                 }else{
-                    vista.animate().translationYBy(-1200).start();
-                    ocul.animate().translationYBy(-1200).start();
-                    card1.animate().translationYBy(-1200).start();
-                    card2.animate().translationYBy(-1200).start();
-                    card3.animate().translationYBy(-1200).start();
-                    card4.animate().translationYBy(-1200).start();
-                    txt_card_1.animate().translationYBy(-1200).start();
-                    txt_card_2.animate().translationYBy(-1200).start();
-                    txt_card_3.animate().translationYBy(-1200).start();
-                    txt_card_4.animate().translationYBy(-1200).start();
-                    tit.animate().translationYBy(-1200).start();
-                    img_serv.animate().translationYBy(-1200).start();
-                    img_preg.animate().translationYBy(-1200).start();
-                    img_herr.animate().translationYBy(-1200).start();
-                    img_social.animate().translationYBy(-1200).start();
+                    vista.animate().translationYBy(-1070).start();
                     tit.setVisibility(View.VISIBLE);
                     rec.animate().alphaBy(1).start();
                     rec.setLayoutManager(gestor);
@@ -164,39 +112,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        cardView = findViewById(R.id.base_cardview);
-        arrow = findViewById(R.id.arrow_button);
-        hiddenView = findViewById(R.id.hidden_view);
-
-        /*arrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                // If the CardView is already expanded, set its visibility
-                //  to gone and change the expand less icon to expand more.
-                if (hiddenView.getVisibility() == View.VISIBLE) {
-
-                    // The transition of the hiddenView is carried out
-                    //  by the TransitionManager class.
-                    // Here we use an object of the AutoTransition
-                    // Class to create a default transition.
-                    TransitionManager.beginDelayedTransition(cardView,
-                            new AutoTransition());
-                    hiddenView.setVisibility(View.GONE);
-                    arrow.setImageResource(R.drawable.ic_baseline_expand_more_24);
-                }
-
-                // If the CardView is not expanded, set its visibility
-                // to visible and change the expand more icon to expand less.
-                else {
-
-                    TransitionManager.beginDelayedTransition(cardView,
-                            new AutoTransition());
-                    hiddenView.setVisibility(View.VISIBLE);
-                    arrow.setImageResource(R.drawable.ic_baseline_expand_less_24);
-                }
-            }
-        });*/
     }
 
 }
