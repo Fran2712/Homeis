@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_aboutus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/overlock"
+        android:text="About Us"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_aboutus1" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="343dp"
+        android:layout_height="111dp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/descrip_aboutus"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_aboutus"
+        app:layout_constraintEnd_toStartOf="@id/guideline_aboutus2"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus1" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/overlock"
+        android:text="Versión 1.0"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus1" />
+
+    <TextView
+        android:id="@+id/tv_conect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/overlock"
+        android:text="CONTÁCTANOS"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_version"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus1" />
+
+    <ImageView
+        android:id="@+id/iv_git"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/icon_git"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_conect"
+        app:layout_constraintEnd_toStartOf="@id/guideline_aboutus3"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus1" />
+
+    <TextView
+        android:id="@+id/tv_gitF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/aboutus_gitF"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_conect"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus3" />
+
+    <ImageView
+        android:id="@+id/iv_git2"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_git"
+        app:layout_constraintTop_toBottomOf="@id/iv_git"
+        app:layout_constraintEnd_toStartOf="@id/guideline_aboutus3"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus1" />
+
+    <TextView
+        android:id="@+id/tv_gitFr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/aboutus_gitFr"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_gitF"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus3" />
+
+    <ImageView
+        android:id="@+id/iv_git3"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_git"
+        app:layout_constraintTop_toBottomOf="@id/iv_git2"
+        app:layout_constraintEnd_toStartOf="@id/guideline_aboutus3"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus1" />
+
+    <TextView
+        android:id="@+id/tv_gitI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/aboutus_I"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_gitFr"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus3" />
+
+    <ImageView
+        android:id="@+id/iv_git4"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_git"
+        app:layout_constraintTop_toBottomOf="@id/iv_git3"
+        app:layout_constraintEnd_toStartOf="@id/guideline_aboutus3"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus1" />
+
+    <TextView
+        android:id="@+id/tv_gitP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/aboutus_P"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_gitI"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus3" />
+
+    <ImageView
+        android:id="@+id/iv_playstore"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_googleplay"
+        app:layout_constraintTop_toBottomOf="@id/iv_git4"
+        app:layout_constraintEnd_toStartOf="@id/guideline_aboutus3"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus1" />
+
+    <TextView
+        android:id="@+id/tv_playstore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/aboutus_ps"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_gitP"
+        app:layout_constraintStart_toStartOf="@id/guideline_aboutus3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_aboutus1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_aboutus3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="70dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_aboutus2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="376dp" />
+
+    <TextView
+        android:id="@+id/tv_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/overlock"
+        android:text="@string/aboutus_cr"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_playstore"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_aboutus2"
+        app:layout_constraintStart_toStartOf="@+id/guideline_aboutus1" />
+
+    <ImageView
+        android:id="@+id/IMG_bg"
+        android:layout_width="412dp"
+        android:layout_height="126dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bg2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

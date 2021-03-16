@@ -55,6 +55,18 @@
     <string name="responder">Responder</string>
     <string name="solicitar">Solicitar</string>
 
+    <string name="descrip_aboutus">El equipo de Homeis es un grupo de jóvenes desarrolladores que
+        crean este espacio para ayudarte a hacer de tu comunidad una unión. Conócenos en nuestros
+        distintos medios de comunicación.</string>
+    <string name="aboutus_gitF">fabioladecena</string>
+    <string name="aboutus_gitFr">Fran2712</string>
+    <string name="aboutus_P">Skarlekos</string>
+    <string name="aboutus_I">Ionutalin23</string>
+    <string name="aboutus_ps">Puntúanos en la Play Store</string>
+    <string name="aboutus_cr">©Copyright 2021 by Homeis</string>
+    <string name="nombreUsuario">Nombre Usuario</string>
+    <string name="ubicacionPerfil">Ubicación</string>
+
     <string name="escriamen">Escriba un mensaje...</string>
     <string name="msg_tu">Tu:</string>
     <string name="screen_title_create">Crea una publicación</string>

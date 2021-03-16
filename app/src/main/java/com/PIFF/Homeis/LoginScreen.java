@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
+import me.relex.circleindicator.CircleIndicator;
 
 import com.PIFF.Homeis.cifrado.ResumenHash;
 import com.PIFF.Homeis.entidad.Pregunta;
@@ -40,6 +43,7 @@ public class LoginScreen extends AppCompatActivity implements AccesoFirebase.Int
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         btn_login = findViewById(R.id.BTN_login);
         ed_email = (TextInputLayout)findViewById(R.id.ED_email);
         ed_pass = (TextInputLayout)findViewById(R.id.ED_pass);
