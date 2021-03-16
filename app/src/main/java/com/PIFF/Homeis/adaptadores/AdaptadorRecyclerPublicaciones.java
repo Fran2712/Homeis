@@ -35,7 +35,7 @@ public class AdaptadorRecyclerPublicaciones extends RecyclerView.Adapter<Adaptad
         TextView tv_titulo = vista.findViewById(R.id.TE_titulo_request);
         TextView tv_autor = vista.findViewById(R.id.TE_autor);
         TextView tv_descrip = vista.findViewById(R.id.TE_descrip);
-        TextView tv_fecha = vista.findViewById(R.id.TE_fecha);
+        TextView tv_fecha = vista.findViewById(R.id.TV_fecha);
         ImageView img_pfp = vista.findViewById(R.id.IMG_pfp);
         ContenedorDeVistas contenedor = new ContenedorDeVistas(vista);
         Log.d("Contenedor","Creando contenedor de vistas");
@@ -78,7 +78,7 @@ public class AdaptadorRecyclerPublicaciones extends RecyclerView.Adapter<Adaptad
             super(vista);
             this.tv_titulo = vista.findViewById(R.id.TE_titulo_request);
             this.tv_autor = vista.findViewById(R.id.TE_autor);
-            this.tv_fecha = vista.findViewById(R.id.TE_fecha);
+            this.tv_fecha = vista.findViewById(R.id.TV_fecha);
             this.tv_descrip = vista.findViewById(R.id.TE_descrip);
             this.img_pfp = vista.findViewById(R.id.IMG_pfp);
         }
