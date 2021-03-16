@@ -94,5 +94,6 @@
 
     <string name="recent_posts_title">Publicaciones Recientes</string>
     <string name="profile_map_title">Mapa</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
