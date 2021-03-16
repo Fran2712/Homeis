@@ -4,13 +4,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/colorAccent6"
+>
 
     <ImageView
         android:id="@+id/back_btn_imageview"
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:layout_marginStart="16dp"
+        app:tint="@color/colorAccent4"
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="@+id/screen_title"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,6 +83,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_service_requests"
+        android:background="@color/colorAccent6"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,6 +95,7 @@
         android:id="@+id/rv_tool_requests"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/colorAccent6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

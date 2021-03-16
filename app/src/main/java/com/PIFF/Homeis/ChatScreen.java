@@ -1,7 +1,10 @@
 package com.PIFF.Homeis;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +28,7 @@ import java.util.Map;
 public class ChatScreen extends AppCompatActivity {
 
     private LinearLayout layout;
-    private ImageView sendButton;
+    private ImageView sendButton, backButton;
     private EditText messageArea;
     private TextView txt_chatWj;
     private ScrollView scrollView;
@@ -39,6 +42,7 @@ public class ChatScreen extends AppCompatActivity {
 
         layout = (LinearLayout) findViewById(R.id.layout1);
         sendButton = (ImageView) findViewById(R.id.sendButton);
+        backButton = (ImageView) findViewById(R.id.back_button);
         messageArea = (EditText) findViewById(R.id.messageArea);
         scrollView = (ScrollView) findViewById(R.id.scrollView);
 
@@ -63,6 +67,12 @@ public class ChatScreen extends AppCompatActivity {
                     reference2.push().setValue(map);
                     messageArea.setText("");
                 }
+            }
+        });
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
@@ -99,19 +109,21 @@ public class ChatScreen extends AppCompatActivity {
     }
 
     public void addMessageBox(String message, int type) {
-        TextView textView = new TextView(ChatScreen.this);
-        textView.setText(message);
+        TextView t = new TextView(ChatScreen.this);
+        t.setText(message);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         lp.setMargins(0, 0, 0, 10);
-        textView.setLayoutParams(lp);
+        t.setLayoutParams(lp);
 
         if (type == 1) {
-            textView.setBackgroundResource(R.drawable.rounded_corner1);
+            t.setTextColor(Color.BLACK);
+            t.setBackgroundResource(R.drawable.rounded_corner1);
         } else {
-            textView.setBackgroundResource(R.drawable.rounded_corner2);
+            t.setTextColor(getResources().getColor(R.color.colorAccent7));
+            t.setBackgroundResource(R.drawable.rounded_corner2);
         }
 
-        layout.addView(textView);
+        layout.addView(t);
         scrollView.fullScroll(View.FOCUS_DOWN);
     }
 }

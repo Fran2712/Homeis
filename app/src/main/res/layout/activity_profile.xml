@@ -24,6 +24,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="120dp"
         android:background="@drawable/shapecard2"
+        android:backgroundTint="@color/colorAccent6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +48,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/overlock_bold"
+        android:textColor="@color/colorAccent6"
         android:text="@string/nombreUsuario"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:textColor="@color/colorAccent4"
         android:fontFamily="@font/overlock"
         android:text="@string/ubicacionPerfil"
         android:textAlignment="center"
@@ -94,6 +97,7 @@
             android:id="@+id/bottom_app_bar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:backgroundTint="@color/colorAccent5"
             android:layout_gravity="bottom"
             app:fabAlignmentMode="center"
             app:hideOnScroll="true"
@@ -107,29 +111,29 @@
                 android:layout_marginRight="18dp">
 
                 <ImageButton
-                    android:id="@+id/first_menu_item"
+                    android:id="@+id/home_menu_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
-                    android:backgroundTint="@android:color/white"
+                    android:backgroundTint="@color/colorAccent5"
                     android:src="@drawable/home_icon"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/second_menu_item"
+                    app:layout_constraintEnd_toStartOf="@+id/chat_menu_button"
                     app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
-                    android:id="@+id/second_menu_item"
+                    android:id="@+id/chat_menu_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@android:color/white"
+                    android:backgroundTint="@color/colorAccent5"
                     android:src="@drawable/messages"
-                    app:layout_constraintBottom_toBottomOf="@+id/first_menu_item"
+                    app:layout_constraintBottom_toBottomOf="@+id/home_menu_button"
                     app:layout_constraintEnd_toStartOf="@+id/placeholder"
                     app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toEndOf="@+id/first_menu_item" />
+                    app:layout_constraintStart_toEndOf="@+id/home_menu_button" />
 
                 <View
                     android:id="@+id/placeholder"
@@ -137,36 +141,37 @@
                     android:layout_height="0dp"
                     android:backgroundTint="@android:color/white"
                     android:visibility="invisible"
-                    app:layout_constraintBottom_toBottomOf="@+id/first_menu_item"
-                    app:layout_constraintEnd_toStartOf="@+id/third_menu_item"
+                    app:layout_constraintBottom_toBottomOf="@+id/home_menu_button"
+                    app:layout_constraintEnd_toStartOf="@+id/notifi_menu_button"
                     app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toEndOf="@+id/second_menu_item"
-                    app:layout_constraintTop_toTopOf="@+id/first_menu_item" />
+                    app:layout_constraintStart_toEndOf="@+id/chat_menu_button"
+                    app:layout_constraintTop_toTopOf="@+id/home_menu_button" />
 
                 <ImageButton
-                    android:id="@+id/third_menu_item"
+                    android:id="@+id/notifi_menu_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@android:color/white"
+                    android:backgroundTint="@color/colorAccent5"
                     android:src="@drawable/notifications"
-                    app:layout_constraintBottom_toBottomOf="@+id/first_menu_item"
-                    app:layout_constraintEnd_toStartOf="@+id/fourth_menu_item"
+                    app:layout_constraintBottom_toBottomOf="@+id/home_menu_button"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_menu_button"
                     app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toEndOf="@+id/placeholder" />
 
                 <ImageButton
-                    android:id="@+id/fourth_menu_item"
+                    android:id="@+id/profile_menu_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@android:color/white"
+                    android:backgroundTint="@color/colorAccent5"
                     android:src="@drawable/profilepic"
-                    app:layout_constraintBottom_toBottomOf="@+id/first_menu_item"
+                    app:layout_constraintBottom_toBottomOf="@+id/home_menu_button"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toEndOf="@+id/third_menu_item"
-                    app:layout_constraintTop_toTopOf="@+id/first_menu_item" />
+                    app:layout_constraintStart_toEndOf="@+id/notifi_menu_button"
+                    app:layout_constraintTop_toTopOf="@+id/home_menu_button" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -175,6 +180,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/subtract"
+            app:tint="@color/colorAccent5"
+            android:src="@drawable/crear_post_but"
             app:fabSize="normal"
             app:layout_anchor="@+id/bottom_app_bar"
             tools:ignore="ContentDescription"
@@ -188,7 +195,7 @@
         android:layout_width="39dp"
         android:layout_height="41dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/shapeshadoww"
+
         android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.895"
@@ -201,6 +208,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:textColor="@color/colorAccent4"
         android:fontFamily="@font/overlock"
         android:text="Settings"
         android:textSize="10sp"
@@ -226,6 +234,7 @@
         android:layout_marginTop="44dp"
         android:fontFamily="@font/overlock_bold"
         android:text="Actividad Reciente"
+        android:textColor="@color/colorAccent4"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ubicacion" />
@@ -238,6 +247,7 @@
         android:layout_marginEnd="88dp"
         android:fontFamily="@font/overlock_bold"
         android:text="Mapa"
+        android:textColor="@color/colorAccent4"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ubicacion" />

@@ -49,6 +49,16 @@ public class CreatePost extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 sel = position;
+                if (position == 3){
+                    servicio_a_ofrecer.setHint(getResources().getText(R.string.pregunta_post));
+                    desccripcion.setVisibility(View.INVISIBLE);
+                }else if (position == 4){
+                    servicio_a_ofrecer.setHint(getResources().getText(R.string.social_post));
+                    desccripcion.setVisibility(View.VISIBLE);
+                }else{
+                    servicio_a_ofrecer.setHint(getResources().getText(R.string.que_ofrece));
+                    desccripcion.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override
@@ -89,6 +99,7 @@ public class CreatePost extends AppCompatActivity {
                         AccesoFirebase.crearPostSocial(ps);
                         break;
                 }
+                finish();
 
 
             }

@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:backgroundTint="@color/colorAccent5"
         app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,6 +35,7 @@
                 android:layout_height="15dp"
                 android:layout_marginBottom="4dp"
                 android:background="@drawable/ic_baseline_thumb_up_24"
+                android:tint="@color/colorAccent4"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.045"
@@ -45,8 +47,9 @@
                 android:layout_width="27dp"
                 android:layout_height="16dp"
                 android:layout_marginEnd="16dp"
-                android:backgroundTint="@android:color/white"
+                android:backgroundTint="@color/colorAccent5"
                 android:src="@drawable/ic_baseline_expand_more_24"
+                android:tint="@color/colorAccent4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/hidden_view" />
 
@@ -80,7 +83,7 @@
                     android:layout_marginEnd="28dp"
                     android:elevation="8dp"
                     android:fontFamily="@font/overlock_bold"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/colorPrimaryRosa"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toStartOf="@+id/guideline2"
                     app:layout_constraintStart_toEndOf="@+id/IMG_pfp"
@@ -93,7 +96,7 @@
                     android:layout_marginTop="22dp"
                     android:elevation="8dp"
                     android:fontFamily="@font/overlock_bold"
-                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textColor="@color/colorAccent7"
                     android:textSize="15sp"
                     app:layout_constraintEnd_toStartOf="@+id/guideline2"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -107,7 +110,8 @@
                     android:layout_marginTop="7dp"
                     android:elevation="8dp"
                     android:fontFamily="@font/overlock"
-                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textColor="@color/colorAccent7"
+
                     android:textSize="15sp"
                     app:layout_constraintEnd_toStartOf="@+id/guideline2"
                     app:layout_constraintStart_toStartOf="@+id/guideline8"
@@ -162,6 +166,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/BTN_request"
                         style="@style/ButtonStraight2"
@@ -173,6 +178,7 @@
                         android:layout_marginBottom="32dp"
                         android:elevation="8dp"
                         android:fontFamily="@font/overlock_bold"
+                        android:textColor="@color/colorAccent5"
                         android:stateListAnimator="@null"
                         android:text="@string/solicitar" />
                 </LinearLayout>

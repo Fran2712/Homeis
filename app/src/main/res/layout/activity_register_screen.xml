@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/colorAccent5"
     tools:context=".RegisterScreen">
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
@@ -40,7 +40,7 @@
         android:layout_marginTop="36dp"
         android:fontFamily="@font/overlock_bold"
         android:text="@string/register_msg"
-        android:textColor="@color/design_default_color_background"
+        android:textColor="@color/colorAccent5"
         android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -48,8 +48,10 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/base_cardview"
         android:layout_width="0dp"
-        android:layout_height="450dp"
-        android:layout_marginTop="120dp"
+        android:layout_height="470dp"
+        android:layout_marginTop="110dp"
+        app:cardBackgroundColor="@color/colorAccent6"
+        android:layout_weight="1"
         android:elevation="8dp"
         app:cardCornerRadius="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,26 +70,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="70dp" />
+                app:layout_constraintGuide_begin="40dp" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_end="70dp" />
+                app:layout_constraintGuide_end="40dp" />
 
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/ED_email"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
                 android:elevation="8dp"
                 android:ems="10"
                 android:hint="@string/mail"
                 android:inputType="textEmailAddress"
-                app:boxBackgroundColor="@android:color/white"
+                style="@style/LoginTextInputLayoutStyle"
+                android:textColorHint="@color/colorAccent7"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopEnd="20dp"
@@ -95,26 +98,26 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline8"
-                app:layout_constraintTop_toTopOf="@+id/vista_contenedor">
-
+                app:layout_constraintTop_toTopOf="parent">
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
                     android:fontFamily="@font/overlock" />
+
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/ED_username"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_marginTop="24dp"
                 android:elevation="8dp"
                 android:ems="10"
                 android:hint="@string/pl_username"
                 android:inputType="textEmailAddress"
-                app:boxBackgroundColor="@android:color/white"
+                style="@style/LoginTextInputLayoutStyle"
+                android:textColorHint="@color/colorAccent7"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopEnd="20dp"
@@ -136,13 +139,13 @@
                 android:id="@+id/CB_terms"
                 android:layout_width="196dp"
                 android:layout_height="63dp"
-
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:elevation="8dp"
                 android:fontFamily="@font/overlock"
+                android:textColor="@color/colorAccent7"
                 android:text="@string/terms"
-                app:buttonTint="@color/colorPrimary"
+                app:buttonTint="@color/colorPrimaryRosa"
                 app:layout_constraintBottom_toTopOf="@+id/BTN_regster"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -155,36 +158,37 @@
                 style="@style/ButtonStraight"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="104dp"
+                android:layout_marginTop="88dp"
                 android:layout_marginBottom="16dp"
                 android:elevation="8dp"
                 android:fontFamily="@font/overlock"
                 android:stateListAnimator="@null"
+                android:textColor="@color/siempreBlanco"
                 android:text="@string/reg"
                 app:layout_constraintBottom_toBottomOf="@+id/vista_contenedor"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline8"
-
                 app:layout_constraintTop_toBottomOf="@+id/ED_conf_pass"
                 app:layout_constraintVertical_bias="0.937" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/ED_conf_pass"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_marginTop="24dp"
                 android:elevation="8dp"
                 android:ems="10"
                 android:hint="@string/pass_conf"
                 android:inputType="textPassword"
-                app:boxBackgroundColor="@android:color/white"
+                style="@style/LoginTextInputLayoutStyle"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopEnd="20dp"
                 app:boxCornerRadiusTopStart="20dp"
                 app:endIconMode="password_toggle"
-                app:endIconTint="@color/colorPrimary"
+                android:textColorHint="@color/colorAccent7"
+                app:endIconTint="@color/colorPrimaryRosa"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline8"
@@ -200,19 +204,20 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/ED_pass"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_marginTop="24dp"
                 android:elevation="8dp"
                 android:ems="10"
                 android:hint="@string/pass"
                 android:inputType="textPassword"
-                app:boxBackgroundColor="@android:color/white"
+                style="@style/LoginTextInputLayoutStyle"
+                android:textColorHint="@color/colorAccent7"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopEnd="20dp"
                 app:boxCornerRadiusTopStart="20dp"
                 app:endIconMode="password_toggle"
-                app:endIconTint="@color/colorPrimary"
+                app:endIconTint="@color/colorPrimaryRosa"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline8"

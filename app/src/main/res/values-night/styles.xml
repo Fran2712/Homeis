@@ -4,7 +4,7 @@
         <item name="colorAccent">@color/colorPrimaryRosa</item>
         <!-- Default color for the dropdown arrow and line -->
         <item name="colorControlNormal">@color/colorAccent4</item>
-        <item name="strokeColor">@color/colorAccent7</item>
+        <item name="backgroundColor">@color/colorAccent6</item>
     </style>
     <style name="AppThemeNoBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
@@ -28,7 +28,6 @@
     </style>
     <style name="ButtonStraight" parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint">@color/colorPrimaryRosa</item>
-        <item name="android:textColor">@color/colorAccent5</item>
         <item name="cornerRadius">20dp</item>
     </style>
 
@@ -37,6 +36,7 @@
         <item name="cornerRadius">20dp</item>
     </style>
     <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
+        <item name="boxStrokeColor">@color/colorAccent5</item>
+        <item name="hintTextColor">@color/colorAccent7</item>
     </style>
 </resources>
