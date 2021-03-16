@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.SearchView;
 
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerPublicaciones;
 import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerServicios;
@@ -24,6 +26,7 @@ public class ServiciosScreen extends AppCompatActivity {
     private RecyclerView.LayoutManager gestor2;
     private AdaptadorRecyclerServicios adapt;
     private CoordinatorLayout coo;
+    private SearchView search_bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,7 @@ public class ServiciosScreen extends AppCompatActivity {
         setContentView(R.layout.activity_servicios_screen);
         rec = findViewById(R.id.RC_servivios);
         coo = findViewById(R.id.coordinator);
+        search_bar = findViewById(R.id.searchView);
 
         Servicio c1 = new Servicio("Mandarina","Li,pio genial","Por si acaso necesitas una sierra radial poes eso, yo se la dejo");
         Servicio c2 = new Servicio("Vegetta777","Electricista gratis xd","Hey muy buenas a todos guapisimos, aqui tengo una aspiradora sin cable por si alguien la quiere");
@@ -46,6 +50,14 @@ public class ServiciosScreen extends AppCompatActivity {
         adapt = new AdaptadorRecyclerServicios(liata, ServiciosScreen.this);
         rec.setAdapter(adapt);
         rec.setLayoutManager(gestor2);
+
+        search_bar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                search_bar.setVisibility(View.VISIBLE);
+            }
+        });
+
 
         //Borde redondo bottom app bar
         float radius = 80;

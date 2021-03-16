@@ -36,7 +36,7 @@ public class AdaptadorRecyclerSocial extends RecyclerView.Adapter<AdaptadorRecyc
         TextView tv_titulo = vista.findViewById(R.id.TV_titulo);
         TextView tv_autor = vista.findViewById(R.id.TV_autor);
         TextView tv_descrip = vista.findViewById(R.id.TV_descrip);
-        TextView tv_fecha = vista.findViewById(R.id.TV_fecha);
+        TextView tv_fecha = vista.findViewById(R.id.TE_fecha);
         ImageView img_pfp = vista.findViewById(R.id.IMG_pfp);
         ContenedorDeVistas contenedor = new ContenedorDeVistas(vista);
         Log.d("Contenedor","Creando contenedor de vistas");

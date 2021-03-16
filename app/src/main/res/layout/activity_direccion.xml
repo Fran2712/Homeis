@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:foreground="@drawable/custom_spinner"
-    tools:context=".Direccion">
+    tools:context=".DireccionScreen">
 
     <View
         android:id="@+id/vista_contenedor"
@@ -187,31 +187,6 @@
         </com.google.android.material.textfield.TextInputLayout>
         -->
 
-    <Spinner
-        android:id="@+id/SPN_ciudades"
-        android:layout_width="271dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="23dp"
-        android:elevation="8dp"
-<<<<<<< HEAD
-        android:theme="@style/ThemeSpinner"
-        style="@style/Widget.AppCompat.Spinner.Underlined"
-=======
-        android:ems="10"
-        app:boxBackgroundColor="@android:color/white"
-        android:hint="@string/country"
-        android:inputType="text"
-        app:boxCornerRadiusBottomEnd="20dp"
-        app:boxCornerRadiusBottomStart="20dp"
-        app:boxCornerRadiusTopEnd="20dp"
-        app:boxCornerRadiusTopStart="20dp"
->>>>>>> 77a49781e731a9cf758daf19b4755f749ab992ed
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/SPN_paises" />
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/BTN_regster"
         style="@style/ButtonStraight"
@@ -225,9 +200,8 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/SPN_ciudades"
 
-        app:layout_constraintVertical_bias="0.411" />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

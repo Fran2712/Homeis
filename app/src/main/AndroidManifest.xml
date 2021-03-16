@@ -21,7 +21,13 @@
             android:theme="@style/AppThemeNoBar" />
         <activity
             android:name=".ServiciosScreen"
-            android:theme="@style/AppThemeNoBar" />
+            android:theme="@style/AppThemeNoBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".RegisterScreen"
             android:theme="@style/AppThemeNoBar" />
@@ -35,13 +41,12 @@
             android:name=".DireccionScreen"
             android:theme="@style/AppThemeNoBar" />
         <activity
+            android:name=".CreatePost"
+            android:theme="@style/AppThemeNoBar">
+        </activity>
+        <activity
             android:name=".SplashScreen"
             android:theme="@style/AppThemeNoBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
