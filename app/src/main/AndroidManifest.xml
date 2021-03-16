@@ -46,6 +46,11 @@
             android:name=".DireccionScreen"
             android:theme="@style/AppThemeNoBar" >
         </activity>
+            android:theme="@style/AppThemeNoBar" />
+        <activity
+            android:name=".CreatePost"
+            android:theme="@style/AppThemeNoBar">
+        </activity>
         <activity
             android:name=".SplashScreen"
             android:theme="@style/AppThemeNoBar">

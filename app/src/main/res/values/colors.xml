@@ -11,5 +11,7 @@
     <color name="colorAccent7">#000000</color>
     <color name="colorAccent8">#FFFFFF</color>
 
-
+    <color name="Blackish">#313131</color>
+    <color name="Black_titles">#2E2E2E</color>
+    <color name="Confirm_blue">#097AF8</color>
 </resources>
