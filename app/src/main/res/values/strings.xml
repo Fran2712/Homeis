@@ -78,4 +78,17 @@
     <string name="post_tipo">Tipo de publicación</string>
     <string name="crear_post">Crear Publicación</string>
 
+    <string name="title_settings">Ajustes</string>
+    <string name="settings_name">Nombre</string>
+    <string name="settings_password">Contraseña</string>
+    <string name="settings_location">Dirección</string>
+    <string name="settings_aboutUs">Sobre Nosotros</string>
+    <string name="settings_logOut">Cerrar Sesión</string>
+    <string name="title_settings_name">Nombre</string>
+    <string name="settings_confirm_password">Confirmar Contraseña</string>
+    <string name="settings_save">Guardar</string>
+    <string name="settings_first_name">Nombre</string>
+    <string name="settings_last_name">Apellido</string>
+    <string name="title_settings_password">Cambiar Contraseña</string>
+    <string name="title_settings_location">Direccion</string>
 </resources>
