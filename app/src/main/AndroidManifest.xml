@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.PIFF.Homeis">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ChatScreen" android:theme="@style/AppThemeNoBar"></activity>
+        <activity android:name=".CreatePost" android:theme="@style/AppThemeNoBar"></activity>
         <activity
             android:name=".HerramientasScreen"
-            android:theme="@style/AppThemeNoBar"/>
+            android:theme="@style/AppThemeNoBar" />
         <activity
             android:name=".SocialScreen"
             android:theme="@style/AppThemeNoBar" />
@@ -43,6 +47,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ChatroomScreen"
+            android:theme="@style/AppThemeNoBar" />
+        <activity
+            android:name=".RequestsScreen"
+            android:theme="@style/AppThemeNoBar" />
+        <activity
+            android:name=".NotificationsScreen"
+            android:theme="@style/AppThemeNoBar" />
 
         <meta-data
             android:name="preloaded_fonts"

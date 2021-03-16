@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.PIFF.Homeis.adaptadores.AdaptadorRecyclerRequests;
 import com.PIFF.Homeis.entidad.Request;
 
 import java.util.ArrayList;
@@ -21,6 +23,7 @@ public class RequestsScreen extends AppCompatActivity {
     private TextView service_title_btn;
     private TextView tool_title_btn;
     private RecyclerView.LayoutManager gestor;
+    private RecyclerView.LayoutManager gestor2;
     private AdaptadorRecyclerRequests adapt_service;
     private AdaptadorRecyclerRequests adapt_tool;
     private ImageView back_btn_iv;
@@ -79,6 +82,7 @@ public class RequestsScreen extends AppCompatActivity {
         tool_requests.add(r4);
 
         gestor = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        gestor2 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         adapt_service = new AdaptadorRecyclerRequests(service_requests);
         //SETTING SERVICE REQUESTS RECYCLER
         request_recycler_services.setAdapter(adapt_service);
@@ -87,7 +91,7 @@ public class RequestsScreen extends AppCompatActivity {
         //SETTING TOOL REQUESTS RECYCLER
         adapt_tool = new AdaptadorRecyclerRequests(tool_requests);
         request_recycler_tools.setAdapter(adapt_tool);
-        request_recycler_tools.setLayoutManager(gestor);
+        request_recycler_tools.setLayoutManager(gestor2);
     }
 
 }

@@ -1,20 +1,31 @@
 package com.PIFF.Homeis.adaptadores;
 
+import android.animation.LayoutTransition;
 import android.content.Context;
+import android.content.Intent;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.PIFF.Homeis.ChatScreen;
+import com.PIFF.Homeis.ChatroomScreen;
 import com.PIFF.Homeis.R;
 import com.PIFF.Homeis.SocialScreen;
-import com.PIFF.Homeis.entidad.Publicacion;
 import com.PIFF.Homeis.entidad.PublicacionSocial;
+import com.PIFF.Homeis.entidad.UserDetails;
+import com.PIFF.Homeis.persistencia.AccesoFirebase;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
@@ -36,14 +47,45 @@ public class AdaptadorRecyclerSocial extends RecyclerView.Adapter<AdaptadorRecyc
         TextView tv_titulo = vista.findViewById(R.id.TV_titulo);
         TextView tv_autor = vista.findViewById(R.id.TV_autor);
         TextView tv_descrip = vista.findViewById(R.id.TV_descrip);
-        TextView tv_fecha = vista.findViewById(R.id.TV_fecha);
+        TextView tv_fecha = vista.findViewById(R.id.TV_txt_fecha);
         ImageView img_pfp = vista.findViewById(R.id.IMG_pfp);
+        final LinearLayout hiddenView = vista.findViewById(R.id.hidden_view);
+        final CardView cardView = vista.findViewById(R.id.base_cardview);
+        final ImageButton arrow= vista.findViewById(R.id.arrow_button);
         ContenedorDeVistas contenedor = new ContenedorDeVistas(vista);
         Log.d("Contenedor","Creando contenedor de vistas");
-        vista.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View view) {
 
+        Button btn_solici = vista.findViewById(R.id.BTN_request);
+
+        btn_solici.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!tv_autor.getText().toString().equals(UserDetails.username)) {
+                    AccesoFirebase.crearChat(tv_autor.getText().toString());
+                    UserDetails.chatWith = tv_autor.getText().toString();
+                    Intent intent = new Intent(context, ChatScreen.class);
+                    context.startActivity(intent);
+                }
+            }
+        });
+
+        arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (hiddenView.getVisibility() == View.VISIBLE) {
+                    hiddenView.setVisibility(View.GONE);
+                    arrow.setImageResource(R.drawable.ic_baseline_expand_more_24);
+                    vista.getLayoutParams().height= 590;
+                    TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
+                }
+                else {
+
+                    hiddenView.setVisibility(View.VISIBLE);
+                    arrow.setImageResource(R.drawable.ic_baseline_expand_less_24);
+                    vista.getLayoutParams().height=800;
+
+                    TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
+                }
             }
         });
         return contenedor;
@@ -63,7 +105,6 @@ public class AdaptadorRecyclerSocial extends RecyclerView.Adapter<AdaptadorRecyc
                 .transition(DrawableTransitionOptions.withCrossFade(500))
                 .into(holder.img_pfp);
         Log.d("Contenedor","Cvinculando la posicion" + position);
-        Log.d("Contenedor","Cvinculando la posicion" + position);
     }
 
     @Override
@@ -75,6 +116,10 @@ public class AdaptadorRecyclerSocial extends RecyclerView.Adapter<AdaptadorRecyc
     public static class ContenedorDeVistas extends RecyclerView.ViewHolder {
         public TextView tv_titulo, tv_autor, tv_descrip,tv_fecha;
         public ImageView img_pfp;
+        public ImageButton arrow;
+        private LinearLayout hiddenView;
+        private CardView cardView;
+
 
         public ContenedorDeVistas(View vista) {
             super(vista);
@@ -83,6 +128,9 @@ public class AdaptadorRecyclerSocial extends RecyclerView.Adapter<AdaptadorRecyc
             this.tv_fecha = vista.findViewById(R.id.TV_fech);
             this.tv_descrip = vista.findViewById(R.id.TV_desc);
             this.img_pfp = vista.findViewById(R.id.IMG_pfp);
+            this.arrow = vista.findViewById(R.id.arrow_button);
+            this.hiddenView = vista.findViewById(R.id.hidden_view);
+            this.cardView = vista.findViewById(R.id.base_cardview);
         }
     }
 

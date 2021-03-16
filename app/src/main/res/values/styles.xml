@@ -25,4 +25,9 @@
         <item name="backgroundTint">@color/colorPrimary</item>
         <item name="cornerRadius">20dp</item>
     </style>
+
+    <style name="ButtonStraight2" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorAccent3</item>
+        <item name="cornerRadius">20dp</item>
+    </style>
 </resources>
