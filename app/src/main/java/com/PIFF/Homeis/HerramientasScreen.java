@@ -82,6 +82,13 @@ public class HerramientasScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.profile_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HerramientasScreen.this, ProfileScreen.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

@@ -97,6 +97,13 @@ public class Preguntas_screen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.profile_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Preguntas_screen.this, ProfileScreen.class);
+                startActivity(intent);
+            }
+        });
 
 
 

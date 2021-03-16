@@ -81,6 +81,13 @@ public class ServiciosScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.profile_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ServiciosScreen.this, ProfileScreen.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

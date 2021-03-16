@@ -12,9 +12,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
-import me.relex.circleindicator.CircleIndicator;
 
 import com.PIFF.Homeis.cifrado.ResumenHash;
 import com.PIFF.Homeis.entidad.Pregunta;
@@ -51,6 +48,8 @@ public class LoginScreen extends AppCompatActivity implements AccesoFirebase.Int
         ed_email.getEditText().addTextChangedListener(validarCampos);
         ed_pass.getEditText().addTextChangedListener(validarCampos);
         btn_login.setEnabled(false);
+
+
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -85,6 +85,13 @@ public class SocialScreen extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+        findViewById(R.id.profile_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SocialScreen.this, ProfileScreen.class);
+                startActivity(intent);
+            }
+        });
 
 
 

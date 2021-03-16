@@ -99,6 +99,13 @@ public class NotificationsScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.profile_menu_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NotificationsScreen.this, ProfileScreen.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public int getServiceRequestCount(){

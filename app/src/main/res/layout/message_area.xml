@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#dddddd"
+    android:background="@color/colorAccent6"
     android:gravity="bottom"
     android:orientation="horizontal">
 
@@ -12,6 +12,7 @@
         android:layout_weight="1"
         android:hint="@string/escriamen"
         android:id="@+id/messageArea"
+        android:textColor="@color/colorAccent7"
         android:maxHeight="80dp"
         />
 

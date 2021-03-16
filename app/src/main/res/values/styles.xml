@@ -1,16 +1,16 @@
 <resources>
     <style name="ThemeSpinner">
         <!-- Color when pressed -->
-        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimaryRosa</item>
         <!-- Default color for the dropdown arrow and line -->
         <item name="colorControlNormal">@color/colorAccent4</item>
         <item name="strokeColor">@color/colorAccent7</item>
     </style>
     <style name="AppThemeNoBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimaryRosa</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryRosaClaro</item>
+        <item name="colorAccent">@color/colorAmarillo</item>
         <item name="colorPrimarySurface">@color/colorAccent2</item>
         <item name="colorSecondary">@color/colorAccent3</item>
         <item name="colorOnSurface">@color/colorAccent5</item>
@@ -18,16 +18,16 @@
     </style>
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimaryRosa</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryRosaClaro</item>
+        <item name="colorAccent">@color/colorAmarillo</item>
         <item name="colorPrimarySurface">@color/colorAccent2</item>
         <item name="colorSecondary">@color/colorAccent3</item>
         <item name="colorOnSurface">@color/colorAccent5</item>
         <item name="colorOnBackground">@color/colorAccent6</item>
     </style>
     <style name="ButtonStraight" parent="Widget.MaterialComponents.Button">
-        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="backgroundTint">@color/colorPrimaryRosa</item>
         <item name="android:textColor">@color/colorAccent5</item>
         <item name="cornerRadius">20dp</item>
     </style>

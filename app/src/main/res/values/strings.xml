@@ -95,4 +95,7 @@
     <string name="recent_posts_title">Publicaciones Recientes</string>
     <string name="profile_map_title">Mapa</string>
 
+    <string name="pregunta_post">Escriba la pregunta</string>
+    <string name="social_post">Escriba el titulo</string>
+
 </resources>

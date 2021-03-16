@@ -168,9 +168,6 @@
         android:elevation="9dp"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/name_txtV"
-        <!--
-        ======================== METER ICONO LOCATION AZUL AQUI ==========================
-        -->
         app:srcCompat="@drawable/ic_place_on_surface_24dp" />
 
     <TextView
@@ -281,7 +278,8 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/subtract"
+            app:tint="@color/colorAccent5"
+            android:src="@drawable/crear_post_but"
             app:fabSize="normal"
             app:layout_anchor="@+id/bottom_app_bar"
             tools:ignore="ContentDescription"

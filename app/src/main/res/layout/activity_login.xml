@@ -61,7 +61,7 @@
                 android:elevation="8dp"
                 android:fontFamily="@font/overlock"
                 android:text="@string/register2"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimaryRosa"
                 app:layout_constraintBottom_toTopOf="@+id/BTN_login"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintHorizontal_bias="0.3"
@@ -71,7 +71,6 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/ED_email"
-                style="@style/LoginTextInputLayoutStyle"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="32dp"
@@ -79,6 +78,7 @@
                 android:ems="10"
                 android:hint="@string/mail"
                 android:inputType="textEmailAddress"
+                style="@style/LoginTextInputLayoutStyle"
                 android:textColorHint="@color/colorAccent7"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
@@ -113,7 +113,7 @@
                 app:boxCornerRadiusTopEnd="20dp"
                 app:boxCornerRadiusTopStart="20dp"
                 app:endIconMode="password_toggle"
-                app:endIconTint="@color/colorPrimary"
+                app:endIconTint="@color/colorPrimaryRosa"
                 app:layout_constraintEnd_toEndOf="@+id/ED_email"
                 app:layout_constraintStart_toStartOf="@+id/ED_email"
                 app:layout_constraintTop_toBottomOf="@+id/ED_email">
@@ -133,7 +133,7 @@
                 android:layout_height="46dp"
                 android:layout_marginTop="48dp"
                 android:layout_marginBottom="32dp"
-                android:textColor="@color/colorAccent8"
+                android:textColor="@color/siempreBlanco"
                 android:elevation="8dp"
                 android:fontFamily="@font/overlock"
                 android:stateListAnimator="@null"

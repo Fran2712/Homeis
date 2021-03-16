@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#F92A82</color>
-    <color name="colorPrimaryDark">#FC7D96</color>
-    <color name="colorAccent">#FFCC69</color>
+    <color name="colorPrimaryRosa">#F92A82</color>
+    <color name="colorPrimaryRosaClaro">#FC7D96</color>
+    <color name="colorAmarillo">#FFCC69</color>
     <color name="colorAccent2">#11A49B</color>
     <color name="colorAccent3">#99F3A6</color>
-    <color name="colorAccent4">#E6E6E6</color>
+
+    <color name="colorAccent4">#535353</color>
     <color name="colorAccent5">#FFFFFF</color>
-    <color name="colorAccent6">#FFFFFF</color>
+    <color name="colorAccent6">#EFEFEF</color>
     <color name="colorAccent7">#000000</color>
     <color name="colorAccent8">#FFFFFF</color>
+    <color name="siempreBlanco">#FFFFFF</color>
+
 
     <color name="Blackish">#313131</color>
     <color name="Black_titles">#2E2E2E</color>
