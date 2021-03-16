@@ -56,7 +56,7 @@ public class RegisterScreen extends AppCompatActivity implements AccesoFirebase.
             }
         });
     }
-    public boolean comprobarCampos(String email, String pass, String conf_pass, boolean terms){
+    public boolean comprobarCampos(String email, String pass, String conf_pass, boolean terms, String username){
         Pattern pattern = Pattern
                 .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
@@ -81,6 +81,9 @@ public class RegisterScreen extends AppCompatActivity implements AccesoFirebase.
             return false;
         }else if(terms == false){
             return false;
+        }else if(username.isEmpty()){
+            ed_username.getEditText().setError("Campo vacio!");
+            return false;
         }else{
             return true;
         }
@@ -94,10 +97,11 @@ public class RegisterScreen extends AppCompatActivity implements AccesoFirebase.
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             String email=ed_email.getEditText().getText().toString();
+            String username=ed_username.getEditText().getText().toString();
             String pass= ed_pass.getEditText().getText().toString();
             String conf_pass = ed_conf_pass.getEditText().getText().toString();
             boolean terms = cb_terms.isChecked();
-            btn_register.setEnabled(comprobarCampos(email,pass,conf_pass,terms));
+            btn_register.setEnabled(comprobarCampos(email,pass,conf_pass,terms,username));
         }
 
         @Override
@@ -110,15 +114,16 @@ public class RegisterScreen extends AppCompatActivity implements AccesoFirebase.
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             String email=ed_email.getEditText().getText().toString();
             String pass= ed_pass.getEditText().getText().toString();
+            String username= ed_username.getEditText().getText().toString();
             String conf_pass = ed_conf_pass.getEditText().getText().toString();
             boolean terms = cb_terms.isChecked();
-            btn_register.setEnabled(comprobarCampos(email,pass,conf_pass,terms));
+            btn_register.setEnabled(comprobarCampos(email,pass,conf_pass,terms,username));
         }
     };
 
     @Override
     public void devolverUsuarios(List<Usuario> usuariosBBDD) {
-        Usuario user = new Usuario(ed_email.getEditText().getText().toString(),ed_pass.getEditText().getText().toString());
+        Usuario user = new Usuario(ed_email.getEditText().getText().toString(),ed_pass.getEditText().getText().toString(), ed_username.getEditText().getText().toString());
         boolean usuario_existente = AccesoFirebase.comprobarUsuario(ed_email.getEditText().getText().toString());
         if (usuario_existente){
             Toast.makeText(RegisterScreen.this,"El usuario ya existe",Toast.LENGTH_LONG).show();

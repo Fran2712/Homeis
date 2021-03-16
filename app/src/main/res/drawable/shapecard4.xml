@@ -3,9 +3,9 @@
     android:shape="rectangle">
     <stroke
         android:width="0.5dip"
-        android:color="#a4a2a2" >
+        android:color="@color/colorAccent4" >
     </stroke>
-    <solid android:color="@android:color/white"/>
+    <solid android:color="@color/colorAccent5"/>
     <corners android:bottomLeftRadius="20dp" android:bottomRightRadius="20dp" />
 
 

@@ -31,7 +31,8 @@
         android:layout_height="0dp"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="@drawable/shapecard"
+        app:cardBackgroundColor="@color/colorAccent6"
+
         android:elevation="1dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -70,7 +71,8 @@
                 android:elevation="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_menu_on_surface_24dp" />
+                app:srcCompat="@drawable/ic_menu_on_surface_24dp"
+                app:tint="@color/colorAccent7" />
 
 
             <TextView
@@ -80,7 +82,7 @@
                 android:elevation="4dp"
                 android:fontFamily="@font/overlock_bold"
                 android:text="@string/quenec"
-                android:textColor="@color/design_default_color_on_secondary"
+                android:textColor="@color/colorAccent7"
                 android:textSize="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -114,7 +116,6 @@
                         android:layout_width="59dp"
                         android:layout_height="55dp"
                         android:layout_marginStart="48dp"
-
                         android:layout_marginTop="33dp"
                         android:layout_marginEnd="45dp"
                         android:layout_marginBottom="48dp"
@@ -123,7 +124,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/herramientas" />
+                        app:srcCompat="@drawable/herramientas"
+                        app:tint="@color/colorAccent5" />
 
                     <TextView
                         android:id="@+id/TV_card_1"
@@ -134,7 +136,7 @@
                         android:elevation="5dp"
                         android:fontFamily="@font/overlock"
                         android:text="@string/herr"
-                        android:textColor="@color/design_default_color_background"
+                        android:textColor="@color/colorAccent5"
                         android:textSize="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -174,15 +176,18 @@
                         android:id="@+id/IMG_preg"
                         android:layout_width="59dp"
                         android:layout_height="55dp"
-                        android:layout_marginStart="48dp"
                         android:layout_marginTop="33dp"
                         android:layout_marginEnd="45dp"
                         android:layout_marginBottom="48dp"
                         android:elevation="5dp"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.979"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/preguntas" />
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/preguntas"
+                        app:tint="@color/colorAccent5"/>
 
                     <TextView
                         android:id="@+id/TV_card_2"
@@ -194,7 +199,7 @@
                         android:elevation="5dp"
                         android:fontFamily="@font/overlock"
                         android:text="@string/preg"
-                        android:textColor="@color/design_default_color_background"
+                        android:textColor="@color/colorAccent5"
                         android:textSize="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -243,7 +248,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/servicios" />
+                        app:srcCompat="@drawable/servicios"
+                        app:tint="@color/colorAccent5"/>
 
                     <TextView
                         android:id="@+id/TV_card_3"
@@ -255,7 +261,7 @@
                         android:elevation="5dp"
                         android:fontFamily="@font/overlock"
                         android:text="@string/serv"
-                        android:textColor="@color/design_default_color_background"
+                        android:textColor="@color/colorAccent5"
                         android:textSize="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -305,7 +311,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/social" />
+                        app:srcCompat="@drawable/social"
+                        app:tint="@color/colorAccent5"/>
 
                     <TextView
                         android:id="@+id/TV_card_4"
@@ -314,7 +321,7 @@
                         android:elevation="5dp"
                         android:fontFamily="@font/overlock"
                         android:text="@string/soc"
-                        android:textColor="@color/design_default_color_background"
+                        android:textColor="@color/colorAccent5"
                         android:textSize="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"

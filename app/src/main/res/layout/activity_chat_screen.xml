@@ -90,6 +90,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/vista_contact"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/vista_contact"
-        tools:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />" />
+        tools:srcCompat="@drawable/ic_baseline_arrow_back_ios_24"
+        app:tint="@color/colorAccent7"/>" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
