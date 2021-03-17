@@ -4,11 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class SettingsScreen extends AppCompatActivity {
     private ImageView img_back, img_name, img_pass, img_add, img_about;
+    private TextView logout;
+    private FirebaseAuth firebaseAuth;
 
 
     @Override
@@ -16,6 +22,18 @@ public class SettingsScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         img_back = findViewById(R.id.btn_back);
+        logout = findViewById(R.id.logOut_text);
+        firebaseAuth = FirebaseAuth.getInstance();
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firebaseAuth.signOut();
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if(user==null){
+                    startActivity(new Intent(SettingsScreen.this,LoginScreen.class));
+                }
+            }
+        });
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
