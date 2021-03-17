@@ -16,9 +16,9 @@
     <string name="mail">E-Mail</string>
 
     <string name="direccion1">Enter your Address ...</string>
-    <string name="direc">Register Adress</string>
-    <string name="address1">Adress 1</string>
-    <string name="address2">Adress 2</string>
+    <string name="direc">Register Address</string>
+    <string name="address1">Address 1</string>
+    <string name="address2">Address 2</string>
     <string name="cp">Postal Code</string>
     <string name="city">City</string>
     <string name="country">Country</string>
@@ -29,7 +29,7 @@
 
     <string name="herr">Tools</string>
     <string name="soc">Social</string>
-    <string name="preg">Qeuestions</string>
+    <string name="preg">Questions</string>
     <string name="serv">Services</string>
 
     <string name="txnec">Need</string>
@@ -57,13 +57,12 @@
     <string name="solicitar">Request</string>
 
     <string name="descrip_aboutus"> The Homeis team is a group of young developers who
-         create this space to help you make your community a union. Get to know us in our
-         different media.</string>
+         created this app to help unify communities by working together. Check us out on social media!</string>
     <string name="aboutus_gitF">fabioladecena</string>
     <string name="aboutus_gitFr">Fran2712</string>
-    <string name="aboutus_P">Skarlekos</string>
+    <string name="aboutus_P">Sarlekos</string>
     <string name="aboutus_I">Ionutalin23</string>
-    <string name="aboutus_ps">Rate us on the Play Store</string>
+    <string name="aboutus_ps">Rate us on the Google Play Store</string>
     <string name="aboutus_cr">©Copyright 2021 by Homeis</string>
     <string name="nombreUsuario">Username</string>
     <string name="ubicacionPerfil">Location</string>
@@ -95,6 +94,7 @@
 
     <string name="recent_posts_title">Recent Posts</string>
     <string name="profile_map_title">Map</string>
+    <string name="title_activity_maps">Map</string>
 
     <string name="pregunta_post">Write the question</string>
     <string name="social_post">Write the title</string>
