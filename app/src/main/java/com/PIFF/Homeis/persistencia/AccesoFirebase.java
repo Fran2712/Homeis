@@ -47,6 +47,21 @@ public class AccesoFirebase {
     public static DatabaseReference conexionBBDD(){
         bd = FirebaseDatabase.getInstance();
         ref = bd.getReference("Usuarios");
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Iterable<DataSnapshot> datos = snapshot.getChildren();
+                for (DataSnapshot d:datos) {
+                    Usuario userBBDD = d.getValue(Usuario.class);
+                    usuariosBBDD.add(userBBDD);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("ERROR",error.getMessage());
+            }
+        });
         return ref;
     }
     public static void altaUsuario(Usuario usuario) {

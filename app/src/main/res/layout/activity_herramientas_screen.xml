@@ -21,6 +21,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="50dp" />
     <TextView
         android:id="@+id/TV_necesi2"
         android:layout_width="161dp"
@@ -58,15 +64,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RC_servivios"
         android:layout_width="match_parent"
-        android:layout_height="540dp"
-        android:layout_marginBottom="29dp"
+        android:layout_height="0dp"
         android:background="@null"
-        app:layout_constraintBottom_toTopOf="@+id/coordinator"
+        app:layout_constraintBottom_toTopOf="@id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator"

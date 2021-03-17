@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.PIFF.Homeis.entidad.UserDetails;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -31,6 +32,7 @@ public class SettingsScreen extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user==null){
                     startActivity(new Intent(SettingsScreen.this,LoginScreen.class));
+                    UserDetails.username = "";
                 }
             }
         });

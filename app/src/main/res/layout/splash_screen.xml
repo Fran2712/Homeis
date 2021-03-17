@@ -8,9 +8,9 @@
     <ImageView
         android:id="@+id/yellowDoor"
         android:layout_width="132dp"
-        android:layout_height="731dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/yellow_door"
         android:scaleType="fitXY"
-        android:src="@drawable/yellow_door"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -18,9 +18,9 @@
     <ImageView
         android:id="@+id/greenDoor"
         android:layout_width="138dp"
-        android:layout_height="733dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/green_door"
         android:scaleType="fitXY"
-        android:src="@drawable/green_door"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

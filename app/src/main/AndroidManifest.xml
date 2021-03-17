@@ -86,6 +86,11 @@
             android:name=".SettingsScreenName"
             android:theme="@style/AppThemeNoBar"/>
 
+        <activity android:name=".SettingsScreenPassword"
+            android:theme="@style/AppThemeNoBar"/>
+
+        <activity android:name=".SettingsScreenDireccion"
+            android:theme="@style/AppThemeNoBar"/>
 
         <meta-data
             android:name="preloaded_fonts"

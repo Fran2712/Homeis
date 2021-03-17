@@ -26,6 +26,7 @@
         android:layout_marginTop="32dp"
         android:fontFamily="@font/overlock_bold"
         android:text="@string/logon_msg"
+
         android:textColor="@color/colorAccent5"
         android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +107,6 @@
                 android:ems="10"
                 android:hint="@string/pass"
                 android:inputType="textPassword"
-
                 android:textColorHint="@color/colorAccent7"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"

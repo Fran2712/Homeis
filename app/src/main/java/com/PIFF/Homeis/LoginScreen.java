@@ -140,7 +140,7 @@ public class LoginScreen extends AppCompatActivity implements AccesoFirebase.Int
                     });
 
         }else{
-            Toast.makeText(LoginScreen.this,"El usuario no existe",Toast.LENGTH_LONG).show();
+           // Toast.makeText(LoginScreen.this,"El usuario no existe",Toast.LENGTH_LONG).show();
         }
     }
 }
