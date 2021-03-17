@@ -119,7 +119,7 @@ public class LoginScreen extends AppCompatActivity implements AccesoFirebase.Int
     public void devolverUsuarios(List<Usuario> usuariosBBDD) {
         String pass_cifrada = ResumenHash.cifrarPassword(ed_pass.getEditText().getText().toString());
         boolean usuario_existente = AccesoFirebase.comprobarLogin(ed_email.getEditText().getText().toString(),pass_cifrada);
-        if(usuario_existente){
+        if(usuario_existente || firebaseAuth.getCurrentUser() != null ){
             firebaseAuth.signInWithEmailAndPassword(ed_email.getEditText().getText().toString(),ed_pass.getEditText().getText().toString())
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
@@ -140,7 +140,7 @@ public class LoginScreen extends AppCompatActivity implements AccesoFirebase.Int
                     });
 
         }else{
-           // Toast.makeText(LoginScreen.this,"El usuario no existe",Toast.LENGTH_LONG).show();
+           Toast.makeText(LoginScreen.this,"El usuario no existe",Toast.LENGTH_LONG).show();
         }
     }
 }
